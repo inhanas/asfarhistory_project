@@ -1,0 +1,226 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="
+    css/style.css">
+    <!--    Feuilles de style responsive-->
+
+    <!--    <link rel="stylesheet" href="css/baseMedias.css">-->
+    <!--title-->
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <!--title-->
+    <title>Accueil</title>
+</head>
+<body>
+<!--header-->
+<header>
+
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="#nosStars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+
+    <!--        middle-->
+    <h1>Bienvenue dans l'archive de l'ASFAR</h1>
+    <h2>Retrouvez notre grande histoire comme si vous y étiez</h2>
+    <a href="#menu" id="arrow2"><img class="logo-asfar" src="img/logo-asfar.png"></a>
+
+</header>
+<!-- Section About-->
+<section id="section-about" class="section-about">
+    <div class="centreH">
+        <h2 class="titreAbout">QUI SOMMES-NOUS</h2>
+    </div>
+    <div class="columns">
+        <div class="column is-4 firstCol">
+
+            <h3 class="sousTitreAbout">
+                Notre objectif:
+            </h3>
+            <p class="paragraphe paragraphe1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+
+            <h3 class="sousTitreAbout">
+                Notre Equipe:
+            </h3>
+            <p class="paragraphe">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class="column is-6 secondCol">
+            <div class="composition">
+                <img src="img/asfar-bvb.jpg" alt="match asfar vs dortmund"
+                     class="composition_photo composition_photo--1">
+                <img src="img/asfar-cdt-mohamed5.jpg" alt="vainquer de la coupe du trone 1959"
+                     class="composition_photo composition_photo--2">
+                <img src="img/first-team-asfar.jpg" alt="la premiére équipe de l'ASFAR"
+                     class="composition_photo composition_photo--3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Section Nos Stars-->
+
+
+<section id="nosStars">
+    <div class="centreH">
+        <h2 class="titreNosStars">Nos Stars</h2>
+    </div>
+
+    <div class="cadre">
+        <div class="centre">
+            <div class="carousel">
+                <div class="changeHiden">
+                    <div class="contenant">
+                        <img src="img/gnadou-sel-wbg-pix.png" class="element"></img>
+                        <img src="img/PSG-logo.png" class="element"></img>
+                        <img src="img/tetoaune.png" class="element"></img>
+                        <img src="img/tanger.png" class="element"></img>
+                        <img src="img/logo-asfar.png" class="element"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Contact-->
+<!--<section id="contact">-->
+<!--    <div class="centreF">-->
+<!--        <h2 class="titreAbout">CONTACTEZ-NOUS</h2>-->
+<!--    </div>-->
+<!--    <h3 class="sousTitreAboutContact">-->
+<!--        Nous partagons vos informations:-->
+<!--    </h3>-->
+<!--    <p class="paragraphe paragraphe1 pix1200 container">-->
+<!--        Comme vous le savez déja , nous sommes des supporters Askary benevols qui veulent honorés l'histoire de leurs-->
+<!--        équipes.-->
+<!--        Nos seules sources d'informations, c'est les journalistes , les pages Askary et nos grands publics pasionés.-->
+<!--        Du coup,n'esitez de nous contactez si vous avez le moindre informations sur l'histoire de ce club mytique afin-->
+<!--        de les partagées avec le grand public Askary-->
+<!--        Merci.-->
+<!--    </p>-->
+<!--    <h3 class="sousTitreAboutContact">-->
+<!--        Par mail </h3>-->
+<!--    <form id="contact-form">-->
+
+<!--        <div class="controls">-->
+<!--            <div class="form-group">-->
+<!--                <label for="form_name" class="label-form">Nom :</label>-->
+<!--                <input id="form_name" type="text" name="name" class="input"-->
+<!--                       placeholder="Please enter your firstname *" required="required"-->
+<!--                       data-error="Firstname is required.">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--                <label for="form_email" class="label-form">Email :</label>-->
+<!--                <input id="form_email" type="email" name="email" class="input"-->
+<!--                       placeholder="Please enter your email *" required="required"-->
+<!--                       data-error="Valid email is required.">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="form_message" class="label-form">Message :</label>-->
+<!--                <textarea id="form_message" name="message" class="input"-->
+<!--                          placeholder="Message for me *"-->
+<!--                          rows="4" required="required" data-error="Please, leave us a message."></textarea>-->
+<!--            </div>-->
+<!--            <input type="submit" class="button-envoyer" value="Envoyer le message">-->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <h3 class="sousTitreAboutContactMedia">-->
+<!--        Sur nos réseaux sociaux-->
+<!--    </h3>-->
+<!--    <div class="flexMedia">-->
+<!--        <div class="medias mediainst">-->
+<!--            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank">-->
+<!--                <i class="fab fa-instagram"></i>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div class="medias mediafb">-->
+<!--            <a href="https://www.facebook.com/inh.anas" target="_blank">-->
+<!--                <i class="fab fa-facebook-f"></i></a>-->
+<!--        </div>-->
+<!--        <div class="medias mediayt">-->
+<!--            <a href="https://www.facebook.com/inh.anas" target="_blank"><i class="fab fa-youtube"></i>-->
+<!--            </a></div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+</body>
+</html>

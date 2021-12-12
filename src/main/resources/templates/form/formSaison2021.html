@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout"><head>
+    <meta charset="utf-8"/>
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<div class="card">
+    <p class="card-title" ajouter une stat ></p>
+    <div class="card-body">
+        <form th:action="@{saveSaison2021}" method="post">
+            <!--            Nom-->
+            <div class="form-group">
+                <label class="label"> Nom </label>
+                <input class="input" type="text" placeholder="Nom du joueur" name="nom" th:value="${saison2021.nom}">
+            </div>
+            <div class="form-group">
+
+                <!--            Prenon-->
+                <label class="label"> Prénom </label>
+                <input class="input" type="text" placeholder="Prénom du joueur" name="prenom" th:value="${saison2021.prenom}">
+            </div>
+            <div class="form-group">
+
+                <!--            Minutes jouées-->
+                <label class="label"> Minutes jouées </label>
+                <input class="input" type="number"  name="minutesJouees" th:value="${saison2021.minutesJouees}">
+            </div>
+            <div class="form-group">
+
+                <!--            But marqués-->
+                <label class="label"> Buts marqués </label>
+                <input class="input" type="number"  name="butMarques" th:value="${saison2021.butMarques}">
+            </div>
+
+            <div class="form-group">
+
+                <!--            Nombre cartons jaunes-->
+                <label class="label"> Nombre cartons jaunes </label>
+                <input class="input" type="number"  name="cartonsJaunes" th:value="${saison2021.cartonsJaunes}">
+            </div>
+
+            <!--           Nombre cartons rouges-->
+            <div class="form-group">
+
+                <label class="label"> Nombre cartons rouges </label>
+                <input class="input" type="number"  name="cartonsRouges" th:value="${saison2021.cartonsRouges}">
+            </div>
+            <!--           Assists-->
+            <div class="form-group">
+
+                <label class="label"> Assists </label>
+                <input class="input" type="number"  name="assists" th:value="${saison2021.assists}">
+            </div>
+
+
+            <!--            Nombre de matches titulaires-->
+            <div class="form-group">
+
+                <label class="label">Nombre de matches titulaires </label>
+                <input class="input" type="number"  name="nbMatchesTitulaires" th:value="${saison2021.nbMatchesTitulaires}">
+            </div>
+            <!--             Nombre de matches remplacants-->
+            <div class="form-group">
+
+                <label class="label"> Nombre de matches remplacants</label>
+                <input class="input" type="number"  name="nbMatchesRemplacants" th:value="${saison2021.nbMatchesRemplacants}">
+            </div>
+            <div class="form-group">
+            <!--                Botola-->
+
+                <label class="label"> nb de matchs en BOTOLA</label>
+                <input class="input" type="number"  name="botola" th:value="${saison2021.botola}">
+            </div>
+            <div class="form-group">
+<!--            coupe du trone-->
+                <label class="label"> Nombre de matches en coupes de trone</label>
+                <input class="input" type="number"  name="coupeDuTrone" th:value="${saison2021.coupeDuTrone}">
+            </div>
+            <div class="form-group">
+
+                <label class="label"> Nombre de matches en CL</label>
+                <input class="input" type="number"  name="cl" th:value="${saison2021.cl}">
+            </div>
+            <div class="form-group">
+
+                <label class="label"> Nombre de matches en coupe de la CAF</label>
+                <input class="input" type="number"  name="CCAF" th:value="${saison2021.CCAF}">
+            </div>
+            <div class="form-group">
+
+                <label class="label"> Nombre de matches dans autres competitions</label>
+                <input class="input" type="number"  name="autreCompt" th:value="${saison2021.autreCompt}">
+            </div>
+            <div class="form-group">
+                <label class="label"> joueurs</label>
+                <select name="name">
+                    <option th:each="l:${listdesJoueurs}" th:text="${l.nom}">ana</option>
+                </select>
+            </div>
+
+            <div class="buttons is-primary">
+                <button type="submit" class="button is-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

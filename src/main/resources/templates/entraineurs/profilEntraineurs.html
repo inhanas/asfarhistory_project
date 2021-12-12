@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- police de caractére -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/profilEntraineurs.css">
+    <!--title-->
+    <title>Profil de l'entraineur</title>
+    <!--    ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+
+<!--body-->
+<body>
+<!--header-->
+<header>
+
+
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="/stars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+</header>
+
+<section id="profilJoueurs">
+
+    <!--    ---------------------------------------panel profil joueurs-------------------------->
+    <div class="centreH">
+        <div class="profilJoueursTitre">Profil de l'entraineur</div>
+    </div>
+
+    <div class="principal-container">
+        <!--        les onglets-->
+        <div class="top-titre"><h1 th:each="l:${profilEntraineurs}"
+                                   th:text="'Entraineur &nbsp-&nbsp '+ ${l.prenom} +'&nbsp' + ${l.nom}"></h1></div>
+        <div class="container-onglets">
+            <div class="onglet active" data-anim="1">Profil Entraineur</div>
+            <div class="onglet" data-anim="2">Statistique</div>
+            <div class="onglet" data-anim="3">Articles</div>
+        </div>
+
+        <!--        le contenu des onglets-->
+        <div class="contenu activeContenu" data-anim="1">
+            <div class="columns">
+                <div th:each="l:${profilEntraineurs}" class="column is-3">
+                    <img class="image-style" th:src="${l.image}">
+                </div>
+                <div class="column is-4">
+                    <table>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres"> Date de naissance :&nbsp</td>
+                            <td class="remplissage" th:text="${l.dateDeNaissance}"></td>
+                        </tr>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres"> Date d'arrivée au club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.dateDArrivee}"></td>
+                        </tr>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres"> Date de départ au club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.dateDDepart}"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="column is-4">
+                    <table>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres"> Titres remportés avec le club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.titresRemportesAvecLesFar}"></td>
+                        </tr>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres"> autres clubs :&nbsp</td>
+                            <td class="remplissage" th:text="${l.clubsEntraines}"></td>
+                        </tr>
+                        <tr th:each="l:${profilEntraineurs}">
+                            <td class="autresTitres">Nombre de titres remportés avec le club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.nbTitresRemportesAvecLesFar}"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="contenu" data-anim="2">
+            <table class="table is-bordered is-striped is-hoverable">
+                <thead>
+                <tr>
+                    <th class="autresTitrestable thSaison">Saison</th>
+
+                    <th class="autresTitrestable">V Botola</th>
+                    <th class="autresTitrestable">N Botola</th>
+                    <th class="autresTitrestable">D Botola</th>
+                    <th class="autresTitrestable">V Coupe du Trone</th>
+                    <th class="autresTitrestable">N Coupe du Trone</th>
+                    <th class="autresTitrestable">D Coupe du Trone</th>
+                    <th class="autresTitrestable">V CL</th>
+                    <th class="autresTitrestable">N CL</th>
+                    <th class="autresTitrestable">D CL</th>
+                    <th class="autresTitrestable">V Coupe de la CAF</th>
+                    <th class="autresTitrestable">N Coupe de la CAF</th>
+                    <th class="autresTitrestable">D Coupe de la CAF</th>
+                    <th class="autresTitrestable">V Super coupe</th>
+                    <th class="autresTitrestable">N Super coupe</th>
+                    <th class="autresTitrestable">D Super coupe</th>
+                    <th class="autresTitrestable">V Autre compétition</th>
+                    <th class="autresTitrestable">N Autre compétition</th>
+                    <th class="autresTitrestable">D Autre compétition</th>
+                    <th class="autresTitrestable">total Victoires</th>
+                    <th class="autresTitrestable">total Nuls</th>
+                    <th class="autresTitrestable">total Défaites</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${listDesStatsEntraineurs}">
+                    <th class="autresTitrestable" th:text="${l.saison}"></th>
+                    <td class="remplissagetable" th:text="${l.botolawon}"></td>
+                    <td class="remplissagetable" th:text="${l.botoladraw}"></td>
+                    <td class="remplissagetable" th:text="${l.botolalost}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDuTronewon}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDuTronedraw}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDuTronelost}"></td>
+                    <td class="remplissagetable" th:text="${l.clwon}"></td>
+                    <td class="remplissagetable" th:text="${l.cldraw}"></td>
+                    <td class="remplissagetable" th:text="${l.cllost}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDeCAFwon}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDeCAFdraw}"></td>
+                    <td class="remplissagetable" th:text="${l.coupeDeCAFlost}"></td>
+                    <td class="remplissagetable" th:text="${l.superCoupewon}"></td>
+                    <td class="remplissagetable" th:text="${l.superCoupedraw}"></td>
+                    <td class="remplissagetable" th:text="${l.superCoupelost}"></td>
+                    <td class="remplissagetable" th:text="${l.anotherCompwon}"></td>
+                    <td class="remplissagetable" th:text="${l.anotherCompdraw}"></td>
+                    <td class="remplissagetable" th:text="${l.anotherComplost}"></td>
+                    <td class="remplissagetable" th:text="${l.won}"></td>
+                    <td class="remplissagetable" th:text="${l.draw}"></td>
+                    <td class="remplissagetable" th:text="${l.lost}"></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th class="autresTitrestable">Total</th>
+                        <th class="remplissagetable" name="totalWonBotola" id="totalWonBotola"></th>
+                        <th class="remplissagetable" name="totalDrawBotola" id="totalDrawBotola"></th>
+                        <th class="remplissagetable" name="totalLostBotola" id="totalLostBotola"></th>
+
+                        <th class="remplissagetable" name="totalcoupeDuTronewon" id="totalcoupeDuTronewon"></th>
+                        <th class="remplissagetable" name="totalcoupeDuTronedraw" id="totalcoupeDuTronedraw"></th>
+                        <th class="remplissagetable" name="totalcoupeDuTronelost" id="totalcoupeDuTronelost"></th>
+
+                        <th class="remplissagetable" name="totalclwon" id="totalclwon"></th>
+                        <th class="remplissagetable" name="totalcldraw" id="totalcldraw"></th>
+                        <th class="remplissagetable" name="totalcllost" id="totalcllost"></th>
+
+                        <th class="remplissagetable" name="totalcafwon" id="totalcafwon"></th>
+                        <th class="remplissagetable" name="totalcafdraw" id="totalcafdraw"></th>
+                        <th class="remplissagetable" name="totalcaflost" id="totalcaflost"></th>
+
+                        <th class="remplissagetable" name="totalsuper" id="totalsuperwon"></th>
+                        <th class="remplissagetable" name="totalsuper" id="totalsuperdraw"></th>
+                        <th class="remplissagetable" name="totalsuper" id="totalsuperlost"></th>
+
+                        <th class="remplissagetable" name="totalautre" id="totalautrewon"></th>
+                        <th class="remplissagetable" name="totalautre" id="totalautredraw"></th>
+                        <th class="remplissagetable" name="totalautre" id="totalautrelost"></th>
+
+                        <th class="remplissagetable" name="totalwon" id="totalwon"></th>
+                        <th class="remplissagetable" name="totaldraw" id="totaldraw"></th>
+                        <th class="remplissagetable" name="totallost" id="totallost"></th>
+
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <div class="contenu" data-anim="3">
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                <tr>
+                    <th class="autresTitres">Titres</th>
+                    <th class="autresTitres">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${articles}">
+                    <th class="autresTitres">
+                        <a th:href="${l.liens}" th:text="${l.titres}" th:target="_blank"></a>
+                    </th>
+                    <td class="remplissage" th:text="${l.description}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    </div>
+
+</section>
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+<!--JS de l'annimation des onglets-->
+<script>
+
+    const onglets = document.querySelectorAll('.onglet');
+    const contenus = document.querySelectorAll('.contenu');
+    let index = 0;
+
+    onglets.forEach(onglet => {
+        onglet.addEventListener('click', () => {
+            if (onglet.classList.contains('active')) {
+                return;
+            } else {
+                onglet.classList.add('active');
+            }
+            index = onglet.getAttribute('data-anim');
+            for (i = 0; i < onglets.length; i++) {
+                if (onglets[i].getAttribute('data-anim') != index) {
+                    onglets[i].classList.remove('active');
+                }
+            }
+            for (j = 0; j < contenus.length; j++) {
+                if (contenus[j].getAttribute('data-anim') == index) {
+                    contenus[j].classList.add('activeContenu')
+                } else {
+                    contenus[j].classList.remove('activeContenu')
+
+                }
+            }
+        })
+    })
+</script>
+<script th:inline="javascript">
+    var somme;
+
+
+
+    /*<![CDATA[*/
+    var valeSaison2020 = /*[[${listDesStatsEntraineurs}]]*/"test";
+    /*]]>*/
+
+
+    function setbotolawon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].botolawon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setbotoladraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].botoladraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setbotolalost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].botolalost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+
+
+    function setcoupedtwon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDuTronewon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcoupedtlost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDuTronelost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcoupedtdraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDuTronedraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+
+
+    function setclwon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].clwon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcllost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].cllost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcldraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].cldraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+
+    function setcafwon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDeCAFwon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcaflost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDeCAFlost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setcafdraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].coupeDeCAFdraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+
+    function setsuperwon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].superCoupewon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setsuperlost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].superCoupelost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setsuperdraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].superCoupedraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+    
+    
+    
+    function setautrewon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].anotherCompwon);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setautrelost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].anotherComplost);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setautredraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].anotherCompdraw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+
+
+
+
+
+    function setwon (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].won);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setlost (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].lost);
+            console.log(f);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    function setdraw (ind,defaultValue){
+        if(valeSaison2020.length>ind){
+            var f = document.createTextNode(valeSaison2020[ind].draw);
+            var result = f.nodeValue;
+            const num = parseInt(result, 10);
+            return isNaN(num) ? defaultValue : num;
+        }
+    }
+    // -----------------------------------------------------------------------
+    
+
+
+
+
+    var champanotherCompwon ="anotherCompwon";
+    var champanotherCompdraw ="anotherCompdraw";
+    var champanotherComplost ="anotherComplost";
+
+    var champwon ="won";
+    var champdraw ="draw";
+    var champlost ="lost";
+
+
+
+
+
+    // ---------------------------------------------------------------
+    var g1 = setcoupedtwon(0,10);
+    var g2 =  setcoupedtwon(1,10);
+    var g3 =  setcoupedtwon(2,10);
+    var g4 =  setcoupedtwon(3,10);
+    var g5 =  setcoupedtwon(4,10);
+    var g6 =  setcoupedtwon(5,10);
+    var g7 =  setcoupedtwon(6,10);
+    var g8 =  setcoupedtwon(7,10);
+
+    var h1 = setcoupedtlost(0,10);
+    var h2 =  setcoupedtlost(1,10);
+    var h3 =  setcoupedtlost(2,10)
+    var h4 =  setcoupedtlost(3,10);
+    var h5 =  setcoupedtlost(4,10);
+    var h6 =  setcoupedtlost(5,10);
+    var h7 =  setcoupedtlost(6,10);
+    var h8 =  setcoupedtlost(7,10);
+
+    var i1 = setcoupedtdraw(0,10);
+    var i2 =  setcoupedtdraw(1,10);
+    var i3 =  setcoupedtdraw(2,10);
+    var i4 =  setcoupedtdraw(3,10);
+    var i5 =  setcoupedtdraw(4,10);
+    var i6 =  setcoupedtdraw(5,10);
+    var i7 =  setcoupedtdraw(6,10);
+    var i8 =  setcoupedtdraw(7,10);
+
+
+
+    var c1 = setbotolawon(0,10);
+    var c2 =  setbotolawon(1,10);
+    var c3 =  setbotolawon(2,10);
+    var c4 =  setbotolawon(3,10);
+    var c5 =  setbotolawon(4,10);
+    var c6 =  setbotolawon(5,10);
+    var c7 =  setbotolawon(6,10);
+    var c8 =  setbotolawon(7,10);
+
+    var e1 = setbotoladraw(0,10);
+    var e2 =  setbotoladraw(1,10);
+    var e3 =  setbotoladraw(2,10);
+    var e4 =  setbotoladraw(3,10);
+    var e5 =  setbotoladraw(4,10);
+    var e6 =  setbotoladraw(5,10);
+    var e7 =  setbotoladraw(6,10);
+    var e8 =  setbotoladraw(7,10);
+
+    var f1 = setbotolalost(0,10);
+    var f2 =  setbotolalost(1,10);
+    var f3 =  setbotolalost(2,10);
+    var f4 =  setbotolalost(3,10);
+    var f5 =  setbotolalost(4,10);
+    var f6 =  setbotolalost(5,10);
+    var f7 =  setbotolalost(6,10);
+    var f8 =  setbotolalost(7,10);
+
+
+    var k1 = setclwon(0,10);
+    var k2 =  setclwon(1,10);
+    var k3 =  setclwon(2,10);
+    var k4 =  setclwon(3,10);
+    var k5 =  setclwon(4,10);
+    var k6 =  setclwon(5,10);
+    var k7 =  setclwon(6,10);
+    var k8 =  setclwon(7,10);
+
+    var l1 = setcllost(0,10);
+    var l2 =  setcllost(1,10);
+    var l3 =  setcllost(2,10);
+    var l4 =  setcllost(3,10);
+    var l5 =  setcllost(4,10);
+    var l6 =  setcllost(5,10);
+    var l7 =  setcllost(6,10);
+    var l8 =  setcllost(7,10);
+
+    var m1 = setcldraw(0,10);
+    var m2 =  setcldraw(1,10);
+    var m3 =  setcldraw(2,10);
+    var m4 =  setcldraw(3,10);
+    var m5 =  setcldraw(4,10);
+    var m6 =  setcldraw(5,10);
+    var m7 =  setcldraw(6,10);
+    var m8 =  setcldraw(7,10);
+
+
+
+    var n1 = setcafwon(0,10);
+    var n2 =  setcafwon(1,10);
+    var n3 =  setcafwon(2,10);
+    var n4 =  setcafwon(3,10);
+    var n5 =  setcafwon(4,10);
+    var n6 =  setcafwon(5,10);
+    var n7 =  setcafwon(6,10);
+    var n8 =  setcafwon(7,10);
+
+    var o1 = setcaflost(0,10);
+    var o2 =  setcaflost(1,10);
+    var o3 =  setcaflost(2,10);
+    var o4 =  setcaflost(3,10);
+    var o5 =  setcaflost(4,10);
+    var o6 =  setcaflost(5,10);
+    var o7 =  setcaflost(6,10);
+    var o8 =  setcaflost(7,10);
+
+    var p1 = setcafdraw(0,10);
+    var p2 =  setcafdraw(1,10);
+    var p3 =  setcafdraw(2,10);
+    var p4 =  setcafdraw(3,10);
+    var p5 =  setcafdraw(4,10);
+    var p6 =  setcafdraw(5,10);
+    var p7 =  setcafdraw(6,10);
+    var p8 =  setcafdraw(7,10);
+
+
+
+    var q1 = setsuperwon(0,10);
+    var q2 =  setsuperwon(1,10);
+    var q3 =  setsuperwon(2,10);
+    var q4 =  setsuperwon(3,10);
+    var q5 =  setsuperwon(4,10);
+    var q6 =  setsuperwon(5,10);
+    var q7 =  setsuperwon(6,10);
+    var q8 =  setsuperwon(7,10);
+    var s1 = setsuperlost(0,10);
+    var s2 =  setsuperlost(1,10);
+    var s3 =  setsuperlost(2,10);
+    var s4 =  setsuperlost(3,10);
+    var s5 =  setsuperlost(4,10);
+    var s6 =  setsuperlost(5,10);
+    var s7 =  setsuperlost(6,10);
+    var s8 =  setsuperlost(7,10);
+    var t1 = setsuperdraw(0,10);
+    var t2 =  setsuperdraw(1,10);
+    var t3 =  setsuperdraw(2,10);
+    var t4 =  setsuperdraw(3,10);
+    var t5 =  setsuperdraw(4,10);
+    var t6 =  setsuperdraw(5,10);
+    var t7 =  setsuperdraw(6,10);
+    var t8 =  setsuperdraw(7,10);
+
+
+
+
+    var v1 = setautrewon(0,10);
+    var v2 =  setautrewon(1,10);
+    var v3 =  setautrewon(2,10);
+    var v4 =  setautrewon(3,10);
+    var v5 =  setautrewon(4,10);
+    var v6 =  setautrewon(5,10);
+    var v7 =  setautrewon(6,10);
+    var v8 =  setautrewon(7,10);
+    var w1 = setautrelost(0,10);
+    var w2 =  setautrelost(1,10);
+    var w3 =  setautrelost(2,10);
+    var w4 =  setautrelost(3,10);
+    var w5 =  setautrelost(4,10);
+    var w6 =  setautrelost(5,10);
+    var w7 =  setautrelost(6,10);
+    var w8 =  setautrelost(7,10);
+    var y1 = setautredraw(0,10);
+    var y2 =  setautredraw(1,10);
+    var y3 =  setautredraw(2,10);
+    var y4 =  setautredraw(3,10);
+    var y5 =  setautredraw(4,10);
+    var y6 =  setautredraw(5,10);
+    var y7 =  setautredraw(6,10);
+    var y8 =  setautredraw(7,10);
+
+
+
+
+
+
+    var z1 = setwon(0,10);
+    var z2 =  setwon(1,10);
+    var z3 =  setwon(2,10);
+    var z4 =  setwon(3,10);
+    var z5 =  setwon(4,10);
+    var z6 =  setwon(5,10);
+    var z7 =  setwon(6,10);
+    var z8 =  setwon(7,10);
+    var a1 = setlost(0,10);
+    console.log(a1);
+
+    var a2 =  setlost(1,10);
+    console.log(a2);
+
+    var a3 =  setlost(2,10);
+    var a4 =  setlost(3,10);
+    var a5 =  setlost(4,10);
+    var a6 =  setlost(5,10);
+    var a7 =  setlost(6,10);
+    var a8 =  setlost(7,10);
+    var b1 = setdraw(0,10);
+    console.log(b1);
+    var b2 =  setdraw(1,10);
+    var b3 =  setdraw(2,10);
+    var b4 =  setdraw(3,10);
+    var b5 =  setdraw(4,10);
+    var b6 =  setdraw(5,10);
+    var b7 =  setdraw(6,10);
+    var b8 =  setdraw(7,10);
+    
+    function countTotalWonBotola(v1,v2,v3,v4,v5,v6,v7,v8){
+        if(v1!= null){
+            somme = v1;
+        }
+        if (v1!= null & v2!= null){
+            somme = v1 + v2;
+        }
+        if (v1!= null & v2!= null & v3!= null){
+            somme = v1 + v2 + v3;
+        }
+        if (v1!= null & v2!= null & v3!= null & v4!= null){
+            somme = v1 + v2 + v3 + v4;
+        }
+        if (v1!= null & v2!= null & v3!= null & v4!= null &  v5!= null){
+            somme = v1 + v2 + v3 + v4 + v5;
+        }
+        if (v1!= null & v2!= null & v3!= null & v4!= null &  v5!= null & v6!= null){
+            somme = v1 + v2 + v3 + v4 + v5 +v6;
+        }
+        if (v1!= null & v2!= null & v3!= null & v4!= null &  v5!= null & v6!= null & v7!=null){
+            somme = v1 + v2 + v3 + v4 + v5 +v6 + v7;
+        }
+        if (v1!= null & v2!= null & v3!= null & v4!= null &  v5!= null & v6!= null &  v7!= null & v8!= null){
+            somme = v1 + v2 + v3 + v4 + v5 +v6 + v7 +v8;
+        }
+        return somme;
+    }
+    $('#totalWonBotola').text(countTotalWonBotola(c1,c2,c3,c4,c5,c6,c7,c8));
+    $('#totalDrawBotola').text(countTotalWonBotola(e1,e2,e3,e4,e5,e6,e7,e8));
+    $('#totalLostBotola').text(countTotalWonBotola(f1,f2,f3,f4,f5,f6,f7,f8));
+
+
+    $('#totalcoupeDuTronewon').text(countTotalWonBotola(g1,g2,g3,g4,g5,g6,g7,g8));
+    $('#totalcoupeDuTronelost').text(countTotalWonBotola(h1,h2,h3,h4,h5,h6,h7,h8));
+    $('#totalcoupeDuTronedraw').text(countTotalWonBotola(i1,i2,i3,i4,i5,i6,i7,i8));
+
+    $('#totalclwon').text(countTotalWonBotola(k1,k2,k3,k4,k5,k6,k7,k8));
+    $('#totalcllost').text(countTotalWonBotola(l1,l2,l3,l4,l5,l6,l7,l8));
+    $('#totalcldraw').text(countTotalWonBotola(m1,m2,m3,m4,m5,m6,m7,m8));
+
+    $('#totalcafwon').text(countTotalWonBotola(n1,n2,n3,n4,n5,n6,n7,n8));
+    $('#totalcaflost').text(countTotalWonBotola(o1,o2,o3,o4,o5,o6,o7,o8));
+    $('#totalcafdraw').text(countTotalWonBotola(p1,p2,p3,p4,p5,p6,p7,p8));
+
+    $('#totalsuperwon').text(countTotalWonBotola(q1,q2,q3,q4,q5,q6,q7,q8));
+    $('#totalsuperlost').text(countTotalWonBotola(s1,s2,s3,s4,s5,s6,s7,s8));
+    $('#totalsuperdraw').text(countTotalWonBotola(t1,t2,t3,t4,t5,t6,t7,t8));
+
+
+    $('#totalautrewon').text(countTotalWonBotola(v1,v2,v3,v4,v5,v6,v7,v8));
+    $('#totalautrelost').text(countTotalWonBotola(w1,w2,w3,w4,w5,w6,w7,w8));
+    $('#totalautredraw').text(countTotalWonBotola(y1,y2,y3,y4,y5,y6,y7,y8));
+
+
+    $('#totalwon').text(countTotalWonBotola(z1,z2,z3,z4,z5,z6,z7,z8));
+    $('#totallost').text(countTotalWonBotola(a1,a2,a3,a4,a5,a6,a7,a8));
+    $('#totaldraw').text(countTotalWonBotola(b1,b2,b3,b4,b5,b6,b7,b8));
+
+
+</script>
+</body>
+</html>

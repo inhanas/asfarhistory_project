@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout"><head>
+    <meta charset="utf-8"/>
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<div class="card">
+    <p class="card-title" ajouter une stat ></p>
+    <div class="card-body">
+        <form th:action="@{saveEntraineursSaison}" method="post">
+            <!--            Nom-->
+            <div class="form-group">
+                <label class="label"> Nom </label>
+                <input class="input" type="text" placeholder="Nom du joueur" name="nom" th:value="${entraineursSaison.nom}">
+            </div>
+            <div class="form-group">
+
+                <!--            Prenon-->
+                <label class="label"> Prénom </label>
+                <input class="input" type="text" placeholder="Prénom du joueur" name="prenom" th:value="${entraineursSaison.prenom}">
+            </div>
+            <!--            Saison-->
+            <div class="form-group">
+                <label class="label"> Nom </label>
+                <input class="input" type="text" placeholder="ex:2019-2020" name="saison" th:value="${entraineursSaison.saison}">
+            </div>
+                <!--       Victoires -->
+                <div class="form-group">
+
+                    <label class="label"> Victoires </label>
+                    <input class="input" type="number"  name="won" th:value="${entraineursSaison.won}">
+                </div>
+
+                <!--       nuls -->
+                <div class="form-group">
+                    <label class="label"> Nuls </label>
+                    <input class="input" type="number"  name="draw" th:value="${entraineursSaison.draw}">
+                </div>
+
+                <!--       Defaites -->
+                <div class="form-group">
+                    <label class="label"> Defaites </label>
+                    <input class="input" type="number"  name="lost" th:value="${entraineursSaison.lost}">
+                </div>
+
+                <!--       Nombres de victoires en botola -->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires en botola </label>
+                    <input class="input" type="number"  name="botolawon" th:value="${entraineursSaison.botolawon}">
+                </div>
+
+                <!--       Nombres de victoires en coupe du trone -->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires en coupe du trone </label>
+                    <input class="input" type="number"  name="coupeDuTronewon" th:value="${entraineursSaison.coupeDuTronewon}">
+                </div>
+
+                <!--       Nombres de victoires en CL -->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires en CL </label>
+                    <input class="input" type="number"  name="clwon" th:value="${entraineursSaison.clwon}">
+                </div>
+
+                <!--       Nombres de victoires en coupe de la CAF-->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires en coupe de la CAF</label>
+                    <input class="input" type="number"  name="coupeDeCAFwon" th:value="${entraineursSaison.coupeDeCAFwon}">
+                </div>
+
+                <!--       Nombres de victoires en super coupe-->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires en super coupe </label>
+                    <input class="input" type="number"  name="superCoupewon" th:value="${entraineursSaison.superCoupewon}">
+                </div>
+
+                <!--       Nombres de victoires dans les autres compétitions-->
+                <div class="form-group">
+                    <label class="label"> Nombres de victoires dans les autres compétitions </label>
+                    <input class="input" type="number"  name="anotherCompwon" th:value="${entraineursSaison.anotherCompwon}">
+                </div>
+
+                <!--       Nombres de nuls en botola -->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls en botola </label>
+                    <input class="input" type="number"  name="botoladraw" th:value="${entraineursSaison.botoladraw}">
+                </div>
+
+                <!--       Nombres de nuls en coupe du trone -->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls en coupe du trone </label>
+                    <input class="input" type="number"  name="coupeDuTronedraw" th:value="${entraineursSaison.coupeDuTronedraw}">
+                </div>
+
+                <!--       Nombres de nuls en CL -->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls en CL </label>
+                    <input class="input" type="number"  name="cldraw" th:value="${entraineursSaison.cldraw}">
+                </div>
+
+                <!--       Nombres de nuls en coupe de la CAF-->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls en coupe de la CAF</label>
+                    <input class="input" type="number"  name="coupeDeCAFdraw" th:value="${entraineursSaison.coupeDeCAFdraw}">
+                </div>
+
+                <!--       Nombres de nuls en super coupe-->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls en super coupe </label>
+                    <input class="input" type="number"  name="superCoupedraw" th:value="${entraineursSaison.superCoupedraw}">
+                </div>
+                <!--       Nombres de nuls dans les autres compétitions-->
+                <div class="form-group">
+                    <label class="label"> Nombres de nuls dans les autres compétitions </label>
+                    <input class="input" type="number"  name="anotherCompdraw" th:value="${entraineursSaison.anotherCompdraw}">
+                </div>
+
+
+                <!--       Nombres de défaites en botola -->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites en botola </label>
+                    <input class="input" type="number"  name="botolalost" th:value="${entraineursSaison.botolalost}">
+                </div>
+
+                <!--       Nombres de défaites en coupe du trone -->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites en coupe du trone </label>
+                    <input class="input" type="number"  name="coupeDuTronelost" th:value="${entraineursSaison.coupeDuTronelost}">
+                </div>
+
+                <!--       Nombres de défaites en CL -->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites en CL </label>
+                    <input class="input" type="number"  name="cllost" th:value="${entraineursSaison.cllost}">
+                </div>
+
+                <!--       Nombres de défaites en coupe de la CAF-->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites en coupe de la CAF</label>
+                    <input class="input" type="number"  name="coupeDeCAFlost" th:value="${entraineursSaison.coupeDeCAFlost}">
+                </div>
+
+                <!--       Nombres de défaites en super coupe-->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites en super coupe </label>
+                    <input class="input" type="number"  name="superCoupelost" th:value="${entraineursSaison.superCoupelost}">
+                </div>
+                <!--       Nombres de défaites dans les autres compétitions-->
+                <div class="form-group">
+                    <label class="label"> Nombres de défaites dans les autres compétitions </label>
+                    <input class="input" type="number"  name="anotherComplost" th:value="${entraineursSaison.anotherComplost}">
+                </div>
+            <div class="form-group">
+                <label class="label"> joueurs</label>
+                <select name="name">
+                    <option th:each="l:${listDesEntraineurs}" th:text="${l.nom}"></option>
+                </select>
+            </div>
+
+            <div class="buttons is-primary">
+                <button type="submit" class="button is-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

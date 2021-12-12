@@ -1,0 +1,206 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/styleStatistiquePage.css">
+    <!--    Feuilles de style responsive-->
+
+    <!--title-->
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--title-->
+    <title>Statistiques par saison</title>
+</head>
+
+
+<!--body-->
+<body>
+<!--header-->
+<header>
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="/stars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+</header>
+<!--section statistique-->
+<section id="stat" class="statistiqueSection">
+    <div class="centreH">
+    <h3 class="statTitre">Statistiques de l'équipe de l'ASFAR par saison</h3>
+    </div>
+    <p class=" container sousTitreStat">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+    </p>
+
+    </div>
+    <!--    panel with image-->
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <div class="card border-danger mb-3">
+                    <div class="card-header bg-danger-1">
+                        <div class="headCard">
+                            <h3>2020-2021</h3>
+                        </div>
+                    </div>
+                    <div class="card-body img-container">
+                        <div class="img-mov">
+                        <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="card border-dark mb-3">
+                    <div class="card-header bg-dark-1">
+                        <div class="headCard">
+                            <h3>2019-2020</h3>
+                        </div>
+                    </div>
+                    <div class="card-body img-container">
+                        <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="card border-success mb-3">
+                    <div class="card-header bg-success-1">
+                        <div class="headCard">
+                            <h3>2018-2019</h3>
+                        </div>
+                    </div>
+                    <div class="card-body img-container">
+                        <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="card border-success mb-3">
+                    <div class="card-header bg-danger-1">
+                        <div class="headCard">
+                            <h3>2017-2018</h3>
+                        </div>
+                    </div>
+                    <div class="card-body img-container">
+                        <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="columns">
+        <div class="column is-3">
+            <div class="card border-danger mb-3">
+                <div class="card-header bg-danger-1">
+                    <div class="headCard">
+                        <h3>2016-2017</h3>
+                    </div>
+                </div>
+                <div class="card-body img-container">
+                    <div class="img-mov">
+                        <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="card border-dark mb-3">
+                <div class="card-header bg-dark-1">
+                    <div class="headCard">
+                        <h3>2015-2016</h3>
+                    </div>
+                </div>
+                <div class="card-body img-container">
+                    <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="card border-success mb-3">
+                <div class="card-header bg-success-1">
+                    <div class="headCard">
+                        <h3>2014-2015</h3>
+                    </div>
+                </div>
+                <div class="card-body img-container">
+                    <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="card border-success mb-3">
+                <div class="card-header bg-danger-1">
+                    <div class="headCard">
+                        <h3>2013-2014</h3>
+                    </div>
+                </div>
+                <div class="card-body img-container">
+                    <a href="/saison2020"> <img class="pic" src="img/botola-logo.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+</body>
+</html>

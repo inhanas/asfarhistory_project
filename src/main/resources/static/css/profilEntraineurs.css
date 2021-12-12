@@ -1,0 +1,337 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-family: 'lato', 'sans-serif';
+    background-color: lightgray;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    height: 100vh;
+    max-width: 100%;
+}
+/*logo*/
+#logo{
+    position: fixed;
+    z-index: 40;
+    width:100%;
+    height: 6rem;
+    background-color: black;
+}
+#logo img{
+    /*position: fixed;*/
+    width: 30%;
+    height: 100%;
+    padding-left: 30rem;
+}
+#logo a i{
+    text-decoration: none;
+    font-size: 3rem ;
+    padding: 1rem 3rem;
+    color: white;
+}
+/* navigation */
+#navigation{
+    position: fixed;
+    top:6rem;
+    z-index: 40;
+    width:100%;
+    background-color: darkgray;
+    text-align: center;
+    line-height: 8rem;
+    height: 6rem;
+    box-shadow: 0 0 0.5px 0 black;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 3rem ;
+    /*padding: 1rem 2.5rem 0rem 0rem;*/
+    line-height: 5rem;
+    font-family: 'kaushan script';
+    color: black;
+}
+.left{
+    float: left;
+    padding: 0.5rem 0rem 0rem 4rem;
+}
+.right{
+    float: right;
+    padding: 0.5rem 4rem 0rem 0rem;
+
+}
+#navigation a:active{
+    font-size: 4rem;
+}
+#icon{
+    display: none;
+}
+header #arrow{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top:-3%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: url("../img/ah_logo.png");
+    background-position: top;
+    background-size: cover;
+
+}
+.centreH {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profilJoueursTitre {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, darkred, black, darkgreen);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+/*réglage de la panel*/
+.principal-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    height: 400px;
+    background: whitesmoke;
+    border-radius: 2px;
+    box-shadow: 0 0 10px black;
+    border-top: 2px solid #333333;
+
+}
+
+.top-titre {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.container-onglets {
+    background: whitesmoke;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.onglet {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.onglet:not(:nth-child(4)) {
+    /*border-right: 1px solid #333333;*/
+}
+
+.contenu {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.contenu h3 {
+    padding: 10px;
+}
+
+.contenu hr {
+    width: 20px;
+    height: 2px;
+    margin-left: 20px;
+    background: #000000;
+    border: none;
+}
+
+.contenu p {
+    padding: 20px;
+}
+
+/*animation*/
+.active {
+    color: black;
+    border-bottom: 5px solid darkred;
+    transition: all 0.3s ease;
+}
+
+.activeContenu {
+    animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.columns {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.column {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.column:not(:nth-child(1):not(:nth-child(3))) {
+    /*border-right: 1px solid #333333;*/
+}
+
+.image-style {
+    position: relative;
+    top: 7%;
+    left: 20%;
+    height: 70%;
+    width: 50%;
+}
+
+.autresTitres {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.remplissage {
+    font-size: 2rem;
+}
+.autresTitrestable {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.remplissagetable {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+table {
+    position: relative;
+    top: 12%;
+    height: 60%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.table{
+    position: relative;
+    margin-left: 20px;
+    top: 12%;
+    height: auto;
+    width: 97%;
+}
+.thSaison{
+    width: 80px;
+}
+.table thead td, .table thead th{
+    color: darkred;
+}
+/*footer*/
+.footer-main-div{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height:auto ;
+    margin: auto;
+}
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    /*width: 50%;*/
+    height: 50%;
+    margin: 0px 20px;
+    /*border-radius: 100%;*/
+    /*background: darkgreen;*/
+}
+.footer-social-icons ul li a {
+    color: darkgreen;
+    font-size: 30px;
+    display: block;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom{
+    height: auto;
+    width: 100%;
+    background: darkred;
+    margin: 0px 0px;
+    padding: 10px;
+}
+.footer-bottom p{
+    font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}

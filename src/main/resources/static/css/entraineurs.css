@@ -1,0 +1,231 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    position: relative;
+    font-family: 'lato','sans-serif';
+    background-color: #ECF0F1;
+    margin: 0;
+}
+
+/*header les deux bar et le logo*/
+header{
+    /*height: 15vh;*/
+    /*max-width: 100%;*/
+}
+/*logo*/
+#logo{
+    position: relative;
+    z-index: 40;
+    width:100%;
+    height: 6rem;
+    background-color: black;
+}
+#logo img{
+    /*position: fixed;*/
+    width: 30%;
+    height: 100%;
+    padding-left: 30rem;
+}
+#logo a i{
+    text-decoration: none;
+    font-size: 3rem ;
+    padding: 1rem 3rem;
+    color: white;
+}
+/* navigation */
+#navigation{
+    position: relative;
+    top:0rem;
+    z-index: 40;
+    width:100%;
+    background-color: darkgray;
+    text-align: center;
+    line-height: 8rem;
+    height: 6rem;
+    box-shadow: 0 0 0.8px 0 black;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 3rem ;
+    /*padding: 1rem 2.5rem 0rem 0rem;*/
+    line-height: 5rem;
+    font-family: 'kaushan script';
+    color: black;
+}
+.left{
+    float: left;
+    padding: 0.5rem 0rem 0rem 4rem;
+}
+.right{
+    float: right;
+    padding: 0.5rem 4rem 0rem 0rem;
+
+}
+#navigation a:active{
+    font-size: 4rem;
+}
+#icon{
+    display: none;
+}
+header #arrow{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top:-3%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: url("../img/ah_logo.png");
+    background-position: top;
+    background-size: cover;
+
+}
+
+.centreH{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.listeEntraineursTitre {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,darkred,black,darkgreen);
+    -webkit-background-clip:text ;
+    color: transparent;
+    padding-top: 3rem;
+    text-align: center;
+    text-align: center;
+}
+#listeEntraineurs{
+    background-color: #ECF0F1;
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.panel{
+    background-color: #FAFAFA;
+    margin-top: 20px;
+}
+.panel-heading{
+    background-color: #B8BABA;
+}
+.columns{
+    padding-top: 20px;
+}
+.card{
+    width: 211.5px;
+    height: 264px;
+}
+.reglage_contenant img{
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.reglage_contenant{
+    padding: 15px;
+}
+.reglage_contenant h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+.reglage_contenant h2{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+.column:nth-child(1) div div h2{
+    color: darkred;
+}
+.column:nth-child(2) div div h2{
+    color: darkgreen;
+}
+.column:nth-child(3) div div h2{
+    color: darkred;
+}
+.column:nth-child(4) div div h2{
+    color: darkgreen;
+}
+/*footer*/
+.footer-main-div{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height:auto ;
+    margin: auto;
+}
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    /*width: 50%;*/
+    height: 50%;
+    margin: 0px 20px;
+    /*border-radius: 100%;*/
+    /*background: darkgreen;*/
+}
+.footer-social-icons ul li a {
+    color: darkgreen;
+    font-size: 30px;
+    display: block;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom{
+    height: auto;
+    width: 100%;
+    background: darkred;
+    margin: 0px 0px;
+    padding: 10px;
+}
+.footer-bottom p{
+    font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}

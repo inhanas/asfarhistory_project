@@ -1,0 +1,466 @@
+html{
+    font-size: 10px;
+    margin: 0;
+}
+body{
+    position: relative;
+    font-family: 'lato','sans-serif';
+    background-color: #ECF0F1;
+    margin: 0;
+}
+
+/*header les deux bar et le logo*/
+header{
+    height: 100vh;
+    max-width: 100%;
+    background: url("../img/background-site.png");
+    background-size: cover;
+    background-position: center;
+}
+/*logo*/
+#logo{
+    position: fixed;
+    z-index: 40;
+    width:100%;
+    height: 6rem;
+    background-color: black;
+}
+#logo img{
+    /*position: fixed;*/
+    width: 30%;
+    height: 100%;
+    padding-left: 30rem;
+}
+#logo a i{
+    text-decoration: none;
+    font-size: 3rem ;
+    padding: 1rem 3rem;
+    color: white;
+}
+/* navigation */
+#navigation{
+    position: fixed;
+    top:6rem;
+    z-index: 40;
+    width:100%;
+    background-color: darkgray;
+    text-align: center;
+    line-height: 8rem;
+    height: 6rem;
+    box-shadow: 0 0 0.5px 0 black;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 3rem ;
+    /*padding: 1rem 2.5rem 0rem 0rem;*/
+    line-height: 5rem;
+    font-family: 'kaushan script';
+    color: black;
+}
+.left{
+    float: left;
+    padding: 0.5rem 0rem 0rem 4rem;
+}
+.right{
+    float: right;
+    padding: 0.5rem 4rem 0rem 0rem;
+
+}
+#navigation a:active{
+    font-size: 4rem;
+}
+#icon{
+    display: none;
+}
+header #arrow{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top:-3%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: url("../img/ah_logo.png");
+    background-position: top;
+    background-size: cover;
+
+}
+
+
+/* fin header des deux bars et logo*/
+
+/*debut header les deux titres*/
+header h1{
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    color: ghostwhite;
+    top: 30rem;
+    font-family: 'kaushan script';
+    font-size: 9rem;
+    letter-spacing: 0.4rem;
+    left: 1%;
+    right: 1%;
+
+}
+header h2{
+    text-align: center;
+    left: 10%;
+    right: 10%;
+    margin: 0;
+    color: whitesmoke;
+    position: absolute;
+    top: 44rem;
+    font-family: 'Abril Fatface';
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+header #arrow2{
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    top:20.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: darkgray;
+    box-shadow: 0 0 0 0 white;
+    animation: pulse 1.3s infinite;
+}
+.logo-asfar{
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    top:1rem;
+    right: 1rem;
+}
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 1rem rgba(255, 255,255,0.01) ;
+    }
+}
+
+/* Premiere section about , 3 photos*/
+.section-about{
+    background-color: #ECF0F1;
+    padding-bottom: 10rem;
+}
+/*le titre de la section*/
+.centreH{
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.titreAbout {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,darkred,black,darkgreen);
+    -webkit-background-clip:text ;
+    color: transparent;
+    padding-top: 5rem;
+}
+.sousTitreAbout{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.paragraphe{
+    font-size: 1.9rem;
+}
+.paragraphe1{
+    margin-bottom: 3rem;
+}
+.firstCol{
+    margin-right: 12rem;
+}
+.columns{
+    margin-left: 10rem;
+}
+.composition{
+    position: relative;
+}
+.composition_photo{
+    width:55%;
+    box-shadow:0 1.5rem 4rem black ;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem;
+}
+.composition_photo--1{
+    left:0;
+    top: -2rem;
+}
+.composition_photo--2{
+    right:0;
+    top: 2rem;
+}
+.composition_photo--3{
+    left:20%;
+    top: 18rem;
+}
+.composition_photo:hover{
+    outline: 1.5rem solid #c0b283;
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0,0,0,0.5);
+    z-index: 30;
+}
+.composition:hover .composition_photo:not(:hover){
+    transform: scale(0.90) ;
+}
+
+.secondCol{
+    margin-top: 15rem;
+}
+
+/*section Nos Stars*/
+.titreNosStars {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,darkred,black,darkgreen);
+    -webkit-background-clip:text ;
+    color: transparent;
+    padding-top: 5rem;
+}
+#nosStars{
+    height: 70rem;
+    width: 100%;
+    border-top: 1px dashed rgb(209,174,59);
+    background:url("../img/mastade.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.cadre{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 110rem;
+    height: 60rem;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    background:rgba(55,55,55,0.3);
+    color: white;
+}
+.centre{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -2.25rem;
+}
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 8rem;
+    text-align: center;
+    line-height: 45px;
+}
+.carousel .changeHiden{
+
+    position:absolute;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    height: 40rem;
+    line-height: 13rem;
+    width: 80%;
+    overflow: hidden;
+}
+.carousel .changeHiden .contenant{
+    position: relative;
+    animation: carousel 15s ease-in-out;
+
+}
+.carousel .changeHiden .element{
+    position: relative;
+    width: 50%;
+    height: 40rem;
+}
+@keyframes carousel {
+    0%, 20%{
+        transform: translateY(0);
+    }
+    25%, 45%{
+        transform: translateY(-47rem);
+    }
+    50%, 70%{
+        transform: translateY(-90rem);
+    }
+    75%,95%{
+        transform: translateY(-132rem);
+    }
+    100%{
+        transform: translateY(-190rem);
+    }
+}
+/*section contactez nous*/
+#contact{
+    position: relative;
+    margin: 0;
+    height: 100vh;
+}
+.centreF{
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+.controls{
+    position: absolute;
+    top:45%;
+    left: 40%;
+}
+
+.label-form{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.input{
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+
+.button-envoyer{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+.flexMedia{
+    position: absolute;
+    top:92%;
+    left:43%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.medias{
+    font-size: 3rem;
+    margin: 2rem;
+}
+.mediainst a{
+
+    color: darkred;
+    text-decoration: none;
+
+}
+.mediafb a{
+    color: black;
+    text-decoration: none;
+
+}
+.mediayt a{
+    color: darkgreen;
+    text-decoration: none;
+
+}
+.sousTitreAboutContact{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+.sousTitreAboutContactMedia{
+    position: absolute;
+    top:90%;
+    left:43%;
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+/*footer*/
+.footer-main-div{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height:auto ;
+    margin: auto;
+}
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    /*width: 50%;*/
+    height: 50%;
+    margin: 0px 20px;
+    /*border-radius: 100%;*/
+    /*background: darkgreen;*/
+}
+.footer-social-icons ul li a {
+    color: darkgreen;
+    font-size: 30px;
+    display: block;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom{
+    height: auto;
+    width: 100%;
+    background: darkred;
+    margin: 0px 0px;
+    padding: 10px;
+}
+.footer-bottom p{
+     font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}

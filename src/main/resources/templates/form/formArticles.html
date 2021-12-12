@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout"><head>
+    <meta charset="utf-8"/>
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<div class="card">
+    <p class="card-title" ajouter une stat ></p>
+    <div class="card-body">
+        <form th:action="@{saveArticles}" method="post">
+            <!--            Titre-->
+            <div class="form-group">
+                <label class="label"> Titre :  </label>
+                <input class="input" type="text" placeholder="Nom du joueur" name="titres" th:value="${articles.titres}">
+            </div>
+
+            <div class="form-group">
+                <!--            Description-->
+                <label class="label"> Description </label>
+                <textarea class="input" type="text" placeholder="Prénom du joueur" name="description" th:value="${articles.description}"></textarea>
+            </div>
+
+            <div class="form-group">
+                <!--            Lien-->
+                <label class="label"> Lien </label>
+                <input class="input" type="text" placeholder="Prénom du joueur" name="liens" th:value="${articles.liens}">
+            </div>
+
+
+            <div class="form-group">
+                <label class="label"> joueurs</label>
+                <select name="name">
+                    <option th:each="l:${listdesJoueurs}" th:text="${l.nom}">ana</option>
+                </select>
+            </div>
+
+            <div class="buttons is-primary">
+                <button type="submit" class="button is-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

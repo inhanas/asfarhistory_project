@@ -1,0 +1,566 @@
+html{
+    font-size: 10px;
+}
+body{
+    position: relative;
+    font-family: 'lato','sans-serif','cursive';
+    background-color: #ECF0F1;
+    margin: 0;
+}
+
+/*header les deux bar et le logo*/
+
+/*logo*/
+#logo{
+    position: relative;
+    z-index: 40;
+    width:100%;
+    height: 6rem;
+    background-color: black;
+}
+#logo img{
+    /*position: fixed;*/
+    width: 30%;
+    height: 100%;
+    padding-left: 30rem;
+}
+#logo a i{
+    text-decoration: none;
+    font-size: 3rem ;
+    padding: 1rem 3rem;
+    color: white;
+}
+/* navigation */
+#navigation{
+    position: relative;
+    /*top:6rem;*/
+    z-index: 40;
+    width:100%;
+    background-color: darkgray;
+    text-align: center;
+    line-height: 8rem;
+    height: 6rem;
+    box-shadow: 0 0 0.5px 0 black;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 3rem ;
+    /*padding: 1rem 2.5rem 0rem 0rem;*/
+    line-height: 5rem;
+    font-family: 'kaushan script';
+    color: black;
+}
+.left{
+    float: left;
+    padding: 0.5rem 0rem 0rem 4rem;
+}
+.right{
+    float: right;
+    padding: 0.5rem 4rem 0rem 0rem;
+
+}
+#navigation a:active{
+    font-size: 4rem;
+}
+#icon{
+    display: none;
+}
+header #arrow{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top:-3%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: url("../img/ah_logo.png");
+    background-position: top;
+    background-size: cover;
+
+}
+#detail_joueur{
+    position: relative;
+}
+.player-background{
+    display: block;
+    left: -35%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    background-position:100% 0;
+    position: relative;
+    background-image:url("../img/page-heading-pattern.png");
+    background-size: cover;
+}
+.bg-color{
+    background-color: black;
+}
+.logo-image{
+    position: relative;
+    width: 390px;
+    height: auto;
+    left: 45%;
+    opacity: 0.7;
+    transform: scale(0.7);
+
+}
+.player-image{
+    position: absolute;
+    width: 331px;
+    height: 400px;
+    top: 5%;
+    left: 19%;
+    opacity: 1;
+}
+.img{
+    height: 400px;
+}
+.player-last-name {
+    margin: 0;
+    font-size: 50px;
+    line-height: 1em;
+    text-align: right;
+    color: darkred;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    font-weight: 300;
+    transform: scale(1.2);
+}
+.player-first-name {
+    margin: 0;
+    font-size: 50px;
+    line-height: 1em;
+    text-align: right;
+    color: dimgrey;
+    position: absolute;
+    top: 25%;
+    left: 37.5%;
+    font-weight: 300;
+    transform: scale(0.8);
+}
+h1{
+    font-family: Cairo;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/*player info*/
+.info-player{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
+.player-titre {
+    font-size: 20px;
+    color: darkred;
+    line-height: 1.2em;
+    margin-bottom: 0.1em;
+    font-weight: 400;
+}
+
+.player-titre h6{
+    color: #dd3333;
+    font-weight: bold;
+}
+.value{
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: dimgrey;
+}
+
+.date_de_naissance{
+    margin-right: 50px;
+}
+.nationalite{
+    margin-right: 50px;
+}
+.Poste{
+    margin-right: 50px;
+}
+.derniere_apparence{
+    margin-right: 50px;
+}
+.img-detail{
+    height: 20px;
+}
+.stast-joueurs{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 65%;
+    left: 42%;
+}
+
+.nb{
+    font-size: 60px;
+    color: dimgrey;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2em;
+}
+.stats-titre{
+    font-size: 20px;
+    color: darkred;
+    line-height: 1.2em;
+    margin-bottom: 0.1em;
+    font-weight: 400;
+}
+.nb_assits{
+    margin-right: 60px;
+}
+.nb_buts{
+    margin-right: 60px;
+
+}
+.nb_game{
+    margin-right: 60px;
+
+}
+/*présentation joueur*/
+#presentation_joueur{
+    position: relative;
+}
+.pres_joueur{
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+}
+.titleDiv{
+    text-align: center;
+}
+.titreSection{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,darkred,black,darkgreen);
+    -webkit-background-clip:text ;
+    color: transparent;
+    padding-top: 1.9rem;
+}
+.columns{
+    padding-top: 20px;
+}
+.text_pres{
+    font-size: 23px;
+}
+/******************************************palmares***************************/
+#palmares{
+    position: relative;
+}
+.palmares_joueur{
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+}
+.palmares_image{
+    display: flex;
+    margin: .4rem 0 .8rem;
+    margin-top: 50px;
+}
+.pal_marg_img{
+    height: 198px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+}
+.pal_marg_img img{
+    filter: drop-shadow(0 1mm 1mm black);
+}
+
+#galerie{
+    position: relative;
+}
+.galerie_div{
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+/*.titre-portfolio {*/
+/*    text-align: center;*/
+/*    font-size: 60px;*/
+/*    font-family: Playfair Display, serif;*/
+/*    margin: 70px 0 70px;*/
+/*    color: #000;*/
+/*}*/
+.grille-portfolio {
+    width: 90%;
+    max-width: 1700px;
+    min-width: 300px;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
+}
+p{
+    visibility: hidden;
+}
+@media (max-width: 1920px) and (min-width: 1777px) {
+    .grid-item:first-child{
+        grid-row: 1/3;
+    }
+    .grid-item:first-child img, .grid-item:nth-child(7) img, .grid-item:nth-child(5) img, .grid-item:nth-child(8) img{
+        height: 560px;
+    }
+    .grid-item:nth-child(7){
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
+    .grid-item:nth-child(5){
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    .grid-item:nth-child(8){
+        grid-column: 3/4;
+        grid-row: 5/7;
+    }
+}
+@media (max-width: 1776px) and (min-width: 1328px) {
+    /*child*/
+    .grid-item:first-child{
+        grid-row: 1/3;
+    }
+    .grid-item:first-child img, .grid-item:nth-child(7) img, .grid-item:nth-child(5) img, .grid-item:nth-child(8) img{
+        height: 560px;
+    }
+    .grid-item:nth-child(7){
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+    .grid-item:nth-child(5){
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    .grid-item:nth-child(8){
+        grid-column: 1/2;
+        grid-row: 5/7;
+    }
+}
+@media (max-width: 1327px) {
+    .grid-item:first-child{
+        grid-row: 1/3;
+    }
+    .grid-item:first-child img, .grid-item:nth-child(7) img, .grid-item:nth-child(5) img, .grid-item:nth-child(8) img{
+        height: 560px;
+    }
+    .grid-item:nth-child(7){
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+    .grid-item:nth-child(5){
+        grid-column: 1/2;
+        grid-row: 5/7;
+    }
+    .grid-item:nth-child(8){
+        grid-column: 2/3;
+        grid-row: 7/9;
+    }
+}
+
+.grid-item {
+    height: 250px;
+    cursor: pointer;
+    position: relative;
+    margin: 30px 15px;
+}
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 550px) {
+    .grille-portfolio {
+        grid-template-columns: repeat(auto-fill, 300px);
+    }
+}
+
+/* Slider */
+
+.slider-portfolio {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #333, #000);
+    display: none;
+}
+.btn-fermer-slider {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.btn-left,
+.btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-left {
+    left: 2%;
+}
+.btn-right {
+    right: 2%;
+}
+.btn-left img,
+.btn-right img {
+    width: 30px;
+    height: 30px;
+}
+
+.img-visible-slider {
+    width: 60%;
+    height: 700px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 700px) {
+    .btn-fermer-slider {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    .btn-left,
+    .btn-right {
+        width: 40px;
+        height: 40px;
+    }
+    .btn-left img,
+    .btn-right img {
+        width: 20px;
+        height: 20px;
+    }
+    .img-visible-slider {
+        width: 95%;
+        height: 500px;
+    }
+}
+/*videos*/
+#videos{
+    position: relative;
+}
+.videos_div{
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+}
+iframe{
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 300px;
+    top:25%;
+    left: 25%;
+}
+/*footer*/
+.footer-main-div{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height:auto ;
+    margin: auto;
+}
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    /*width: 50%;*/
+    height: 50%;
+    margin: 0px 20px;
+    /*border-radius: 100%;*/
+    /*background: darkgreen;*/
+}
+.footer-social-icons ul li a {
+    color: darkgreen;
+    font-size: 30px;
+    display: block;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: darkred;
+    margin: 0px 0px;
+    padding: 10px;
+}
+.footer-bottom p{
+    font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}

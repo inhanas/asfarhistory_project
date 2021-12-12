@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="jscript/graph.js"></script>
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/saison20192020.css">
+    <!--title-->
+    <title>Statistiques de la saison 2019-2020</title>
+</head>
+
+
+<!--body-->
+<body>
+<!--header-->
+<header>
+
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--    <nav id="#logo">-->
+    <!--        <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>-->
+    <!--        <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-facebook-f"></i></a>-->
+    <!--        <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i class="fab fa-instagram"></i></a>-->
+    <!--    </nav>-->
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="index.html">Accueil</a>
+        <a href="/palmares" >Palmarés</a>
+        <a href="statistiquePage.html" >Statistiques</a>
+        <a href="#joueurs" >Joueurs</a>
+        <a href="#contact" >Contact</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+    <!--    background in a panel-->
+    <!--    <div class="panel container">-->
+    <!--        <div class="bg">-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <a href="#menu" id="arrow"><img class="logo-asfar" src="src/img/logo-asfar.png" height="50px" width="50px"-->
+    <!--                                    class></a>-->
+</header>
+<!---------------------------------section classement------------------------------------------->
+<section id="saison2020" class="saisonSection">
+    <div class="panel container">
+        <div class="panel-heading">
+            <div class="centreH">
+                <h3 class="saisonTitre">Classement</h3>
+            </div>
+        </div>
+
+        <!--    classement BOTOLA-->
+        <div class="panel-block">
+
+            <table class="table container">
+                <thead>
+                <tr>
+                    <th scope="col">Rang</th>
+                    <th scope="col">Equipe</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">J</th>
+                    <th scope="col">G</th>
+                    <th scope="col">N</th>
+                    <th scope="col">P</th>
+                    <th scope="col">Bp</th>
+                    <th scope="col">Bc</th>
+                    <th scope="col">Diff</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Raja</td>
+                    <td>60</td>
+                    <td>30</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>43</td>
+                    <td>23</td>
+                    <td>+20</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Wydad</td>
+                    <td>59</td>
+                    <td>30</td>
+                    <td>17</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>52</td>
+                    <td>28</td>
+                    <td>+24</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>RS Berkane</td>
+                    <td>57</td>
+                    <td>30</td>
+                    <td>15</td>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>35</td>
+                    <td>23</td>
+                    <td>+12</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Fath US</td>
+                    <td>49</td>
+                    <td>30</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>39</td>
+                    <td>30</td>
+                    <td>+9</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>MC Oujda</td>
+                    <td>48</td>
+                    <td>30</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>35</td>
+                    <td>28</td>
+                    <td>+7</td>
+                </tr>
+                <tr class="is-selected is-active">
+                    <th scope="row">6</th>
+                    <td>ASFAR</td>
+                    <td>45</td>
+                    <td>30</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>45</td>
+                    <td>34</td>
+                    <td>+11</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>MA Tétouan</td>
+                    <td>40</td>
+                    <td>30</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>27</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>RC Oued-zem</td>
+                    <td>36</td>
+                    <td>30</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>CAY Berrechid</td>
+                    <td>36</td>
+                    <td>30</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>14</td>
+                    <td>33</td>
+                    <td>44</td>
+                    <td>-11</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>HU Agadir</td>
+                    <td>36</td>
+                    <td>30</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>34</td>
+                    <td>38</td>
+                    <td>-4</td>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <td>DH EL Jadida</td>
+                    <td>35</td>
+                    <td>30</td>
+                    <td>8</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>26</td>
+                    <td>28</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td>RCA Zemamra</td>
+                    <td>34</td>
+                    <td>30</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>40</td>
+                    <td>41</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <td>OC Safe</td>
+                    <td>33</td>
+                    <td>30</td>
+                    <td>6</td>
+                    <td>15</td>
+                    <td>9</td>
+                    <td>25</td>
+                    <td>34</td>
+                    <td>-9</td>
+                </tr>
+                <tr>
+                    <th scope="row">14</th>
+                    <td>IR Tanger</td>
+                    <td>32</td>
+                    <td>30</td>
+                    <td>7</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>20</td>
+                    <td>36</td>
+                    <td>-16</td>
+                </tr>
+                <tr>
+                    <th scope="row">15</th>
+                    <td>OC Khouribga</td>
+                    <td>28</td>
+                    <td>30</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>13</td>
+                    <td>24</td>
+                    <td>38</td>
+                    <td>-14</td>
+                </tr>
+                <tr>
+                    <th scope="row">16</th>
+                    <td>Raja de Beni Mellal</td>
+                    <td>12</td>
+                    <td>30</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>20</td>
+                    <td>13</td>
+                    <td>42</td>
+                    <td>-29</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!---------------------------------section Statistiques des joueurs------------------------------------------->
+<section id="allStats" class="allStatClass">
+    <div class="panel container">
+        <div class="panel-heading">
+            <div class="centreH">
+                <h3 class="saisonTitre">toutes les statistiques du saison</h3>
+            </div>
+        </div>
+
+        <!--    classement BOTOLA-->
+        <div class="panel-block">
+
+            <table class="table container">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Minutes jouées</th>
+                    <th scope="col">Buts marqués</th>
+                    <th scope="col">Cartons jaunes</th>
+                    <th scope="col">Cartons rouges</th>
+                    <th scope="col">Passes décisives</th>
+                    <th scope="col">Nombres de titularisations</th>
+                    <th scope="col">Nombres de remplacants</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${playersListx}">
+                    <th th:text="${l.nom}" scope="row">1</th>
+                    <td th:text="${l.prenom}"></td>
+                    <td th:text="${l.minutesJouees}"></td>
+                    <td th:text="${l.butMarques}"></td>
+                    <td th:text="${l.cartonsJaunes}"></td>
+                    <td th:text="${l.cartonsRouges}"></td>
+                    <td th:text="${l.assists}"></td>
+                    <td th:text="${l.nbMatchesTitulaires}"></td>
+                    <td th:text="${l.nbMatchesRemplacants}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!---------------------------------statistiques des joueurs-------------------------------------------->
+
+<section id="statistiqueDesJoueurs">
+    <div class="panel container">
+        <div class="panel-heading">
+            <div class="centreH">
+                <h3 class="saisonTitre">Statistiques des joueurs</h3>
+            </div>
+        </div>
+        <div class="panel-block container">
+            <div class="columns container align-content-center">
+                <div class="column is-4">
+                    <canvas id="myChart" height="240px" class="backgd">
+                    </canvas>
+                </div>
+
+                <div class="column is-4">
+                    <canvas id="meilleurButeur" height="240px" class="backgd">
+                    </canvas>
+                </div>
+                <div class="column is-4">
+                    <canvas id="meilleurPasseur" height="240px" class="backgd">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------------------statistiques de l'équipe-------------------------------------------->
+
+<section id="statistiqueDeLEquipe">
+    <div class="panel container">
+        <div class="panel-heading">
+            <div class="centreH">
+                <h3 class="saisonTitre">Statistiques de l'équipe</h3>
+            </div>
+        </div>
+        <div class="panel-block container">
+            <div class="columns container align-content-center">
+                <div class="column is-4">
+                    <canvas id="vnd" height="240px" class="backgd">
+                    </canvas>
+                </div>
+
+                <div class="column is-4">
+                    <canvas id="bMbE" height="240px" class="backgd">
+                    </canvas>
+                </div>
+                <div class="column is-4">
+                    <canvas id="arrDprt" height="240px" class="backgd">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div id="main"></div>
+</section>
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+
+
+<!-- -----------------------------------   JAVASCRIPT CHART------------------------------------->
+<script>
+    // fonction parse to in
+    function getNumber({value, defaultValue}) {
+        const num = parseInt(value, 10);
+        return isNaN(num) ? defaultValue : num;
+    }
+
+
+</script>
+<!-------------------------------------matches---------------------------------------------------------->
+
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+    var vale = /*[[${allStats}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].nbVictoires);
+        var b = document.createTextNode(vale[0].nbNuls);
+        var c = document.createTextNode(vale[0].nbDefaites);
+
+
+
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+        var h = c.nodeValue;
+
+        console.log(f);
+        console.log(j);
+        console.log(h);
+
+
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+    var v = getNumber({value: h, defaultValue: 10});
+
+
+
+    Chart.defaults.global.defaultFontSize = 10;
+    Chart.defaults.global.defafontcolor = 'darkgray'
+    let vnd = document.getElementById('vnd').getContext('2d');
+    Chart.defaults.global.defaultColor = '#777'
+    let vndChart = new Chart(vnd, {
+        type: 'doughnut',
+        data: {
+            labels: ['Victoire', 'Nul', 'Defaite'],
+            datasets: [{
+                label: 'matches',
+                data: [z,w,v
+                ],
+                backgroundColor: ['#EC5F99',
+                    '#FFC300',
+                    '#11A9B4']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Résultas des matchs',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            }
+
+            , scales: {
+                xAxes: [{
+                    display: false
+                }
+                ]
+                , yAxes: [{
+                    display: false
+                }]
+            }
+        }
+    });
+</script>
+<!-------------------------------------ration buts marqués / buts encaissés---------------------------------------------------------->
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+    var vale = /*[[${allStats}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].nbButsMarques);
+        var b = document.createTextNode(vale[0].nbButsEncaisses);
+
+
+
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+
+
+
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+
+    Chart.defaults.global.defaultFontSize = 10;
+    Chart.defaults.global.defafontcolor = 'darkgray'
+    let bMbE = document.getElementById('bMbE').getContext('2d');
+    Chart.defaults.global.defaultColor = '#777'
+    let bMbEChart = new Chart(bMbE, {
+        type: 'doughnut',
+        data: {
+            labels: ['Buts Marqués', 'Buts Encaissés'],
+            datasets: [{
+                label: 'Buts',
+                data: [
+                    z,w
+                ],
+                backgroundColor: [
+                    '#FFC300',
+                    '#11A9B4']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Buts marqués / Buts Encaissés',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            }
+
+            , scales: {
+                xAxes: [{
+                    display: false
+                }
+                ]
+                , yAxes: [{
+                    display: false
+                }]
+            }
+        }
+    });
+</script>
+
+<!-------------------------------------Arrivés et departs---------------------------------------------------------->
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+    var vale = /*[[${allStats}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].nbDArrives);
+        var b = document.createTextNode(vale[0].nbDDepart);
+
+
+
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+
+    Chart.defaults.global.defaultFontSize = 10;
+    Chart.defaults.global.defafontcolor = 'darkgray'
+    let arrDprt = document.getElementById('arrDprt').getContext('2d');
+    Chart.defaults.global.defaultColor = '#777'
+    let arrDprtChart = new Chart(arrDprt, {
+        type: 'doughnut',
+        data: {
+            labels: ['Les arrivés', 'Les departs'],
+            datasets: [{
+                label: 'Buts',
+                data: [
+                    z,w
+                ],
+                backgroundColor: [
+                    '#FFC300',
+                    '#EC5F99']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Arrivés / Départs',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            }
+
+            , scales: {
+                xAxes: [{
+                    display: false
+                }
+                ]
+                , yAxes: [{
+                    display: false
+                }]
+            }
+        }
+    });
+</script>
+
+<!-- --------------------------------       minutes jouées---------------------------------->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var vale = /*[[${bestApparance}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].minutesJouees);
+        var b = document.createTextNode(vale[1].minutesJouees);
+        var c = document.createTextNode(vale[2].minutesJouees);
+        var d = document.createTextNode(vale[3].minutesJouees);
+        var e = document.createTextNode(vale[4].minutesJouees);
+
+        var a1 = document.createTextNode(vale[0].nom);
+        var b1 = document.createTextNode(vale[1].nom);
+        var c1 = document.createTextNode(vale[2].nom);
+        var d1 = document.createTextNode(vale[3].nom);
+        var e1 = document.createTextNode(vale[4].nom);
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+        var h = c.nodeValue;
+        var k = d.nodeValue;
+        var t = e.nodeValue;
+
+        var f1 = a1.nodeValue;
+        var j1 = b1.nodeValue;
+        var h1 = c1.nodeValue;
+        var k1= d1.nodeValue;
+        var t1 = e1.nodeValue;
+
+        console.log(f1);
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+    var v = getNumber({value: h, defaultValue: 10});
+    var r = getNumber({value: k, defaultValue: 10});
+    var y = getNumber({value: t, defaultValue: 10});
+
+    Chart.defaults.global.defaultFontSize = 10;
+    Chart.defaults.global.defafontcolor = 'darkgray'
+    let myChart = document.getElementById('myChart').getContext('2d');
+    Chart.defaults.global.defaultColor = '#777'
+    let massPopChart = new Chart(myChart, {
+        color: 'green',
+        type: 'bar',
+        data: {
+            labels: [f1,j1,h1,k1,t1],
+            datasets: [{
+                label: 'minutes',
+                data: [z, w, v, r, y],
+                backgroundColor: ['#595757',
+                    '#CF4848',
+                    '#11A9B4',
+                    '#FFC300',
+                    '#878784']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Meilleurs apparences',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            }
+
+            , scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        min: 0,
+                    }
+                }]
+            }
+        }
+    });
+</script>
+<!--******************************************************************************************-->
+<!--***********************************************************************-->
+<!--     -----------------------------   Meilleurs buteurs--------------------------------------------->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var vale = /*[[${bestGoals}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].butMarques);
+        var b = document.createTextNode(vale[1].butMarques);
+        var c = document.createTextNode(vale[2].butMarques);
+        var d = document.createTextNode(vale[3].butMarques);
+        var e = document.createTextNode(vale[4].butMarques);
+
+        var a1 = document.createTextNode(vale[0].nom);
+        var b1 = document.createTextNode(vale[1].nom);
+        var c1 = document.createTextNode(vale[2].nom);
+        var d1 = document.createTextNode(vale[3].nom);
+        var e1 = document.createTextNode(vale[4].nom);
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+        var h = c.nodeValue;
+        var k = d.nodeValue;
+        var t = e.nodeValue;
+
+        var f1 = a1.nodeValue;
+        var j1 = b1.nodeValue;
+        var h1 = c1.nodeValue;
+        var k1= d1.nodeValue;
+        var t1 = e1.nodeValue;
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+    var v = getNumber({value: h, defaultValue: 10});
+    var r = getNumber({value: k, defaultValue: 10});
+    var y = getNumber({value: t, defaultValue: 10});
+
+
+    let meilleurButeur = document.getElementById('meilleurButeur').getContext('2d');
+    let butsChart = new Chart(meilleurButeur, {
+        type: 'bar',
+        data: {
+            labels: [f1,j1,h1,k1,t1
+            ],
+            datasets: [{
+                label: 'Buts',
+                data: [z, w, v, r, y],
+                backgroundColor: ['#595757',
+                    '#CF4848',
+                    '#11A9B4',
+                    '#FFC300',
+                    '#878784']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Meilleurs buteurs',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            }
+            , scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        min: 0,
+                    }
+                }]
+            }
+        }
+    });
+</script>
+<!--     -----------------------------   Meilleurs passeurs--------------------------------------------->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var vale = /*[[${bestAssist}]]*/"test";
+    /*]]>*/
+    for (var i = 0; i < vale.length; i++) {
+
+        // recuperer les données de la liste
+        var a = document.createTextNode(vale[0].assists);
+        var b = document.createTextNode(vale[1].assists);
+        var c = document.createTextNode(vale[2].assists);
+        var d = document.createTextNode(vale[3].assists);
+        var e = document.createTextNode(vale[4].assists);
+
+
+        var a1 = document.createTextNode(vale[0].nom);
+        var b1 = document.createTextNode(vale[1].nom);
+        var c1 = document.createTextNode(vale[2].nom);
+        var d1 = document.createTextNode(vale[3].nom);
+        var e1 = document.createTextNode(vale[4].nom);
+        // recuperer les valeurs des donnees de la liste
+        var f = a.nodeValue;
+        var j = b.nodeValue;
+        var h = c.nodeValue;
+        var k = d.nodeValue;
+        var t = e.nodeValue;
+
+        var f1 = a1.nodeValue;
+        var j1 = b1.nodeValue;
+        var h1 = c1.nodeValue;
+        var k1= d1.nodeValue;
+        var t1 = e1.nodeValue;
+
+    }
+    var z = getNumber({value: f, defaultValue: 10});
+    var w = getNumber({value: j, defaultValue: 10});
+    var v = getNumber({value: h, defaultValue: 10});
+    var r = getNumber({value: k, defaultValue: 10});
+    var y = getNumber({value: t, defaultValue: 10});
+    let meilleurPasseur = document.getElementById('meilleurPasseur').getContext('2d');
+    let passesChart = new Chart(meilleurPasseur, {
+        type: 'bar',
+        data: {
+            labels: [f1,j1,h1,k1,t1
+            ],
+            datasets: [{
+                label: 'Buts',
+                data: [z,w,v,r,y
+                ],
+                backgroundColor: ['#595757',
+                    '#CF4848',
+                    '#11A9B4',
+                    '#FFC300',
+                    '#878784']
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Meilleurs passeurs',
+                textAlign: 'center',
+                fontSize: 14
+            }, legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        min: 0,
+                    }
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>

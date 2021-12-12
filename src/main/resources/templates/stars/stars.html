@@ -1,0 +1,126 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!--    Slick-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/stars.css">
+    <!--    Feuilles de style responsive-->
+
+    <!--    <link rel="stylesheet" href="css/baseMedias.css">-->
+    <!--title-->
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--title-->
+    <title>Nos Stars</title>
+</head>
+
+
+<!--body-->
+<body>
+<!--header-->
+<header>
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="/stars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+</header>
+<!--section statistique-->
+<section id="stat" class="statistiqueSection">
+    <div class="centreH">
+    <h3 class="statTitre">Nos Stars</h3>
+    </div>
+</section>
+<section id="nosStars">
+        <div class="logo-slider">
+            <div class="item"><a href="/timoumi"><img src="img/timoumi.png" alt=""></a></div>
+            <div class="item"><a href="#"><img src="img/timoumi.png" alt=""></a></div>
+            <div class="item"><a href="#"><img src="img/timoumi.png" alt=""></a></div>
+            <div class="item"><a href="#"><img src="img/timoumi.png" alt=""></a></div>
+            <div class="item"><a href="#"><img src="img/timoumi.png" alt=""></a></div>
+        </div>
+</section>
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script type="text/javascript">
+        $('.logo-slider').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        autoplayspeed: 2000,
+        infiniite: true,
+        prevArrow:"<img class='a-left control-c prev slick-prev' src='img/arrow_left.png'>",
+        nextArrow:"<img class='a-right control-c next slick-next' src='img/arrow_right.png'>"
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- police de caractére -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/profilJoueurs.css">
+    <!--title-->
+    <title>Liste des joueurs</title>
+    <!--    ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+
+<!--body-->
+<body>
+<!--header-->
+<header>
+
+
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="/stars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+</header>
+
+<!--<section id="profilJoueurs">-->
+
+
+    <!--    ---------------------------------------panel profil joueurs-------------------------->
+    <div class="centreH">
+        <div class="profilJoueursTitre">Profil des joueurs
+    </div>
+    </div>
+
+    <div class="principal-container">
+        <!--        les onglets-->
+        <div class="top-titre"><h1 th:each="l:${profilJoueurs}"
+                                   th:text="'Joueur &nbsp-&nbsp '+ ${l.prenom} +'&nbsp' + ${l.nom}"></h1></div>
+        <div class="container-onglets">
+            <div class="onglet active" data-anim="1">Profil joueur</div>
+            <div class="onglet" data-anim="2">Apparence</div>
+            <div class="onglet" data-anim="3">Buts</div>
+            <div class="onglet" data-anim="4">Articles</div>
+        </div>
+
+        <!--        le contenu des onglets-->
+        <div class="contenu activeContenu" data-anim="1">
+            <div class="columns">
+                <div class="column is-3">
+                    <img class="image-style" src="img/reda-slim.jpg">
+                </div>
+                <div class="column is-4">
+                    <table>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Date de naissance :&nbsp</td>
+                            <td class="remplissage" th:text="${l.dateDeNaissance}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Taille :&nbsp</td>
+                            <td class="remplissage" th:text="${l.taille}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Date d'arrivée au club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.getDateDArrivee()}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Date de depart :&nbsp</td>
+                            <td class="remplissage" th:text="${l.getDateDDepart()}"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="column is-4">
+                    <table>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Pied fort :&nbsp</td>
+                            <td class="remplissage" th:text="${l.nom}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Numero de maillot :&nbsp</td>
+                            <td class="remplissage" th:text="${l.numeroMaillot}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Nombre de titre avec le club :&nbsp</td>
+                            <td class="remplissage" th:text="${l.titreAvecFar}"></td>
+                        </tr>
+                        <tr th:each="l:${profilJoueurs}">
+                            <td class="autresTitres"> Total des titres :&nbsp</td>
+                            <td class="remplissage" th:text="${l.totalTitre}"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="contenu" data-anim="2">
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                <tr>
+                    <th class="autresTitres">Saison</th>
+                    <th class="autresTitres">Botola</th>
+                    <th class="autresTitres">Coupe du Trone</th>
+                    <th class="autresTitres">CL</abbr></th>
+                    <th class="autresTitres">Coupe de la CAF</th>
+                    <th class="autresTitres">Autre compétition</th>
+                    <th class="autresTitres">Total</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${apparenceSaison2020}">
+                    <th class="autresTitres" th:text="${l.saison}"></th>
+                    <td class="remplissage" th:text="${l.botola}"></td>
+                    <td class="remplissage" th:text="${l.coupeDuTrone}"></td>
+                    <td class="remplissage" th:text="${l.cl}"></td>
+                    <td class="remplissage" th:text="${l.CCAF}"></td>
+                    <td class="remplissage" th:text="${l.autreCompt}"></td>
+                    <td class="remplissage" th:text="${l.coupeDuTrone + l.botola + l.cl + l.CCAF + l.autreCompt}"></td>
+                </tr>
+                <tr th:each="l:${apparenceSaison2021}">
+                    <th class="autresTitres" th:text="${l.saison}"></th>
+                    <td class="remplissage" th:text="${l.botola}"></td>
+                    <td class="remplissage" th:text="${l.coupeDuTrone}"></td>
+                    <td class="remplissage" th:text="${l.cl}"></td>
+                    <td class="remplissage" th:text="${l.CCAF}"></td>
+                    <td class="remplissage" th:text="${l.autreCompt}"></td>
+                    <td class="remplissage" th:text="${l.coupeDuTrone + l.botola + l.cl + l.CCAF + l.autreCompt}"></td>
+                </tr>
+                </tbody>
+                <tfoot>
+
+                <tr>
+                    <th class="autresTitres"> Total</th>
+                    <td id="output" class="remplissage"></td>
+                    <td id="output1" class="remplissage"></td>
+                    <td id="output2" class="remplissage"></td>
+                    <td id="output3" class="remplissage"></td>
+                    <td id="output4" class="remplissage"></td>
+
+
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <div class="contenu" data-anim="3">
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                <tr>
+                    <th class="autresTitres">Saison</th>
+                    <th class="autresTitres">Botola</th>
+                    <th class="autresTitres">Coupe du Trone</th>
+                    <th class="autresTitres">CL</abbr></th>
+                    <th class="autresTitres">Coupe de la CAF</th>
+                    <th class="autresTitres">Autre compétition</th>
+                    <th class="autresTitres">Total</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${apparenceSaison2020}">
+                    <th class="autresTitres" th:text="${l.saison}"></th>
+                    <td class="remplissage" th:text="${l.butsEnBotola}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCoupeDuTrone}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCL}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCoupeDeLaCAF}"></td>
+                    <td class="remplissage" th:text="${l.butsEnAutreCompt}"></td>
+                    <td class="remplissage" th:text="${l.butsEnBotola + l.butsEnCoupeDuTrone + l.butsEnCL + l.butsEnCoupeDeLaCAF + l.butsEnAutreCompt}"></td>
+                </tr>
+                <tr th:each="l:${apparenceSaison2021}">
+                    <th class="autresTitres" th:text="${l.saison}"></th>
+                    <td class="remplissage" th:text="${l.butsEnBotola}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCoupeDuTrone}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCL}"></td>
+                    <td class="remplissage" th:text="${l.butsEnCoupeDeLaCAF}"></td>
+                    <td class="remplissage" th:text="${l.butsEnAutreCompt}"></td>
+                    <td class="remplissage" th:text="${l.butsEnBotola + l.butsEnCoupeDuTrone + l.butsEnCL + l.butsEnCoupeDeLaCAF + l.butsEnAutreCompt}"></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th class="autresTitres"> Total</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="contenu" data-anim="4">
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                <tr>
+                    <th class="autresTitres">Titres</th>
+                    <th class="autresTitres">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="l:${articles}">
+                    <th class="autresTitres">
+                        <a th:href="${l.liens}" th:text="${l.titres}" th:target="_blank"></a>
+                    </th>
+                    <td class="remplissage" th:text="${l.description}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    </div>
+
+<!--</section>-->
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+<!--JS de l'annimation des onglets-->
+<script>
+    const onglets = document.querySelectorAll('.onglet');
+    const contenus = document.querySelectorAll('.contenu');
+    let index = 0;
+
+    onglets.forEach(onglet => {
+        onglet.addEventListener('click', () => {
+            if (onglet.classList.contains('active')) {
+                return;
+            } else {
+                onglet.classList.add('active');
+            }
+            index = onglet.getAttribute('data-anim');
+            for (i = 0; i < onglets.length; i++) {
+                if (onglets[i].getAttribute('data-anim') != index) {
+                    onglets[i].classList.remove('active');
+                }
+            }
+            for (j = 0; j < contenus.length; j++) {
+                if (contenus[j].getAttribute('data-anim') == index) {
+                    contenus[j].classList.add('activeContenu')
+                } else {
+                    contenus[j].classList.remove('activeContenu')
+
+                }
+            }
+        })
+    })
+</script>
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+    var valeSaison2020 = /*[[${apparenceSaison2020}]]*/"test";
+    /*]]>*/
+    console.log(valeSaison2020);
+    for (var i = 0; i < valeSaison2020.length; i++) {
+        var bbotola = document.createTextNode(valeSaison2020[0].botola);
+        console.log(bbotola);
+        var f = bbotola.nodeValue;
+        console.log(f);
+        // var z = getNumber({value: f, defaultValue: 10});
+        // console.log(z);
+    }
+</script>
+</body>
+</html>

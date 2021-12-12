@@ -1,0 +1,395 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="css/palmares.css">
+
+    <!--    Feuilles de style responsive-->
+
+    <!--    <link rel="stylesheet" href="css/baseMedias.css">-->
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--title-->
+    <title>Palmarés</title>
+</head>
+<body>
+<!--header-->
+<header>
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="/stars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+    <!--        middle-->
+    <h1>Découvrez le palmarés du club le plus titrés au Maroc</h1>
+</header>
+<!-- Section image-->
+<section id="image">
+
+</section>
+<section id="presentation_titres">
+    <div class="grilleCss">
+        <div class="image1" data-aos="zoom-out-left">
+            <img src="img/botola-coupe.png" class="imageAnim2" alt="trois">
+        </div>
+        <div class="image2" data-aos="zoom-out-left">
+            <img src="img/coupe_du_trone.png" class="imageAnim1" alt="coupe du trone">
+        </div>
+        <div class="image3" data-aos="fade-in" data-aos-delay="100">
+            <img src="img/super_coupe_maroc.png" class="imageAnim1" alt="coupe du trone">
+        </div>
+
+        <div class="image4" data-aos="zoom-out-right">
+            <img src="img/cl_coupe.png" class="imageAnim1" alt="coupe du trone">
+        </div>
+        <div class="image5" data-aos="zoom-out-right">
+            <img src="img/caf_coupe.png" class="imageAnim2" alt="trois">
+        </div>
+    </div>
+</section>
+<section id="botola">
+
+    <div class="container">
+        <div class="titre">
+            <h1> BOTOLA</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <img src="img/palmares_botola_noir.jpg">
+            </div>
+            <div class="column is-6">
+                <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                    <tr>
+                        <td class="saison">2007-2008</td>
+                        <td><i class="fas fa-circle won"></i>14 &nbsp<i class="fas fa-circle draw"></i>11&nbsp <i class="fas fa-circle lost"></i> 5 </td>
+                        <td class="pt">53</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">2004-2005</td>
+                        <td><i class="fas fa-circle won"></i>17 &nbsp<i class="fas fa-circle draw"></i>11 &nbsp<i class="fas fa-circle lost"></i> 2 </td>
+                        <td class="pt">62</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1988-1989</td>
+                        <td><i class="fas fa-circle won"></i>13 &nbsp<i class="fas fa-circle draw"></i>12 &nbsp <i class="fas fa-circle lost"></i> 5 </td>
+                        <td class="pt">68</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1986-1987</td>
+                        <td><i class="fas fa-circle won"></i>14 &nbsp<i class="fas fa-circle draw"></i>7 &nbsp<i class="fas fa-circle lost"></i> 1 </td>
+                        <td class="pt">57</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1983-1984</td>
+                        <td><i class="fas fa-circle won"></i>16 &nbsp<i class="fas fa-circle draw"></i>9 &nbsp<i class="fas fa-circle lost"></i> 5 </td>
+                        <td class="pt">71</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1969-1970</td>
+                        <td><i class="fas fa-circle won"></i>16 &nbsp<i class="fas fa-circle draw"></i>12 &nbsp<i class="fas fa-circle lost"></i> 2 </td>
+                        <td class="pt">74</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1967-1968</td>
+                        <td><i class="fas fa-circle won"></i>17 &nbsp<i class="fas fa-circle draw"></i>14 &nbsp<i class="fas fa-circle lost"></i> 3 </td>
+                        <td class="pt">82</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1966-1967</td>
+                        <td><i class="fas fa-circle won"></i>13 &nbsp<i class="fas fa-circle draw"></i>13 &nbsp<i class="fas fa-circle lost"></i> 4 </td>
+                        <td class="pt">69</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1963-1964</td>
+                        <td><i class="fas fa-circle won"></i>15 &nbsp<i class="fas fa-circle draw"></i>8 &nbsp<i class="fas fa-circle lost"></i> 3 </td>
+                        <td class="pt">64</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1962-1963</td>
+                        <td><i class="fas fa-circle won"></i>12 &nbsp<i class="fas fa-circle draw"></i>12 &nbsp<i class="fas fa-circle lost"></i> 2 </td>
+                        <td class="pt">62</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1961-1962</td>
+                        <td><i class="fas fa-circle won"></i>12 &nbsp<i class="fas fa-circle draw"></i>12 &nbsp <i class="fas fa-circle lost"></i> 7 </td>
+                        <td class="pt">57</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1960-1961</td>
+                        <td><i class="fas fa-circle won"></i>13 &nbsp<i class="fas fa-circle draw"></i>7 &nbsp<i class="fas fa-circle lost"></i> 6 </td>
+                        <td class="pt">59</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="coupe_du_trone">
+    <div class="border"></div>
+    <div class="container">
+        <div class="titre">
+            <h1> COUPE DU TRÔNE</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <img src="img/palmares_coupe.jpg">
+            </div>
+            <div class="column is-6">
+                <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                    <tr>
+                        <td class="saison">2008-2009</td>
+                        <td>FUS</td>
+                        <td class="saison">1-1&nbsp (5-4)</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">2007-2008</td>
+                        <td>MAS</td>
+                        <td class="saison">1-0</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">2006-2007</td>
+                        <td>RACHAD</td>
+                        <td class="saison">1-1&nbsp (5-3)</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">2003-2004</td>
+                        <td>WAC</td>
+                        <td class="saison">0-0&nbsp (3-0)</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">2002-2003</td>
+                        <td>WAC</td>
+                        <td class="saison">1-0</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1998-1999</td>
+                        <td>SCCM</td>
+                        <td class="saison">1-0</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1985-1986</td>
+                        <td>DHJ</td>
+                        <td class="saison">3-1</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1984-1985</td>
+                        <td>DHJ</td>
+                        <td class="saison">3-0</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1983-1984</td>
+                        <td>KAC</td>
+                        <td class="saison">1-0</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1970-1971</td>
+                        <td>MAS</td>
+                        <td class="saison">1-1&nbsp (8-7)</td>
+                    </tr>
+                    <tr>
+                        <td class="saison">1958-1959</td>
+                        <td>MCO</td>
+                        <td class="saison">1-0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="super_coupe">
+    <div class="border"></div>
+    <div class="container">
+        <div class="titre">
+            <h1> SUPER COUPE DU MAROC</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <img src="img/first-team-asfar.jpg">
+            </div>
+            <div class="column is-6">
+                <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                    <tr>
+                        <td></td><td class="saison">1959</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR &nbsp(Vainquer de la coupe)</td>
+                        <td class="td_club">Etoile de casablance &nbsp(Vainquer du championnat)</td>
+                        <td class="td_club">2-0</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td class="saison">1961</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR &nbsp(Vainquer du championnat)</td>
+                        <td class="td_club"> Kénitra Athlétic Club &nbsp(Vainquer de la coupe)</td>
+                        <td class="td_club">1-0</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td class="saison">1962</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR (Vainquer du championnat)</td>
+                        <td class="td_club">Mouloudia d'Oujda (Vainquer de la coupe)</td>
+                        <td class="td_club">5-3</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td class="saison">1963</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR (Vainquer du championnat)</td>
+                        <td class="td_club">Kawkab de Marrakech (Vainquer de la coupe)</td>
+                        <td class="td_club">4-1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cl">
+    <div class="border"></div>
+    <div class="container">
+        <div class="titre">
+            <h1> CHAMPIONS LEAGUE AFRICAINE</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <img src="img/cl_1985.jpg">
+            </div>
+            <div class="column is-6">
+                <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                    <tr>
+                        <td></td></td><td></td><td class="saison">Premier Tour</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR</td>
+                        <td class="td_club">PORTS AUTHORITY</td>
+                        <td class="td_club">8 - 0</td>
+                        <td class="td_club">Forfait</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td></td><td class="saison">2 éme Tour</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR</td>
+                        <td class="td_club">CA BIZERTIN</td>
+                        <td class="td_club">4 - 1</td>
+                        <td class="td_club">0 - 1</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td></td><td class="saison">Quarts de Finale</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR</td>
+                        <td class="td_club">AS KALOUM STAR</td>
+                        <td class="td_club">3 - 0</td>
+                        <td class="td_club">0 - 3 (3 - 1)</td>
+                    </tr>
+
+                    <tr>
+                        <td></td><td></td><td class="saison">Demie Finale</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR</td>
+                        <td class="td_club">ZAMALEK SC</td>
+                        <td class="td_club">1 - 0</td>
+                        <td class="td_club">0 - 1 (4 - 3)</td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td class="saison">Finale</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="td_club">ASFAR</td>
+                        <td class="td_club">AS BILIMA</td>
+                        <td class="td_club">5 - 2</td>
+                        <td class="td_club">1 - 1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section id="coupe_de_la_caf">-->
+
+<!--</section>-->
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+
+<script>
+    $(".imageAnim1").fadeIn(3000);
+        // const image1 = document.getElementsByClassName('imageAnim1');
+        // new simpleParallax (image1, {
+        //     scale: 1.4,
+        //     orientation: 'left'
+        // })
+
+</script>
+</html>

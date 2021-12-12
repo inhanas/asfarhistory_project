@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout"><head>
+    <meta charset="utf-8"/>
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+    <p class="card-title" ajouter un entraineur ></p>
+    <div class="card-body">
+        <form th:action="@{saveManagers}" method="post">
+<!--            Nom-->
+            <div class="form-group">
+            <label class="label"> Nom </label>
+                <input class="input" type="text" placeholder="Nom du joueur" name="nom" th:value="${managers.nom}">
+            </div>
+            <div class="form-group">
+
+                <!--            Prenon-->
+            <label class="label"> Prénom </label>
+            <input class="input" type="text" placeholder="Prénom du joueur" name="prenom" th:value="${managers.prenom}">
+            </div>
+            <div class="form-group">
+
+                <!--            Date de naissance-->
+                <label class="label"> Date de naissance </label>
+                <input class="input" type="date"  name="dateDeNaissance" th:value="${managers.dateDeNaissance}">
+            </div>
+
+            <div class="form-group">
+            <!--            Date d'arrivée-->
+            <label class="label"> Date d'arrivée au club </label>
+            <input class="input" type="date"  name="dateDArrivee" th:value="${managers.dateDArrivee}">
+            </div>
+
+            <div class="form-group">
+
+            <!--            Date de depart-->
+            <label class="label"> Date de départ </label>
+            <input class="input" type="date"  name="dateDDepart" th:value="${managers.dateDDepart}">
+            </div>
+
+            <!--          Clubs entrainés -->
+            <div class="form-group">
+
+                <label class="label"> Clubs entrainés </label>
+                <input class="input" type="text"  name="clubsEntraines" th:value="${managers.clubsEntraines}">
+            </div>
+
+            <!--         titres Remportés Avec Les Far -->
+            <div class="form-group">
+
+                <label class="label"> Nb Titres Remportés Avec Les Far </label>
+                <input class="input" type="text"  name="NbTitresRemportesAvecLesFar" th:value="${managers.nbTitresRemportesAvecLesFar}">
+            </div>
+            <!--         titres Remportés Avec Les Far -->
+            <div class="form-group">
+
+                <label class="label"> titres Remportés Avec Les Far </label>
+                <input class="input" type="text"  name="titresRemportésAvecLesFar" th:value="${managers.titresRemportesAvecLesFar}">
+            </div>
+            <!--          Photo -->
+            <div class="form-group">
+
+            <label class="label"> Photo </label>
+            <input class="input" type="text"  name="image" th:value="${managers.image}">
+            </div>
+
+            <div class="buttons is-primary">
+                <button type="submit" class="button is-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

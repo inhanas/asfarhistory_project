@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout"><head>
+    <meta charset="utf-8"/>
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+    <p class="card-title" ajouter une saison ></p>
+    <div class="card-body">
+        <form th:action="@{saveToutesLesSaisons}" method="post">
+<!--            Nom-->
+            <div class="form-group">
+            <label class="label"> saison </label>
+                <input class="input" type="text" placeholder="ex:saison2019_2020" name="saison" th:value="${toutesLesSaisons.saison}">
+            </div>
+
+
+            <div class="form-group">
+
+                <!--            classement-->
+            <label class="label"> Classement </label>
+            <input class="input" type="text"  name="classement" th:value="${toutesLesSaisons.classement}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  Entraineur </label>
+                <input class="input" type="text"  name="entraineur" th:value="${toutesLesSaisons.entraineur}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  nombre des buts marqués </label>
+                <input class="input" type="number"  name="nbButsMarques" th:value="${toutesLesSaisons.nbButsMarques}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des buts encaisses  </label>
+                <input class="input" type="number"  name="nbButsEncaisses" th:value="${toutesLesSaisons.nbButsEncaisses}">
+            </div>
+
+
+
+
+            <div>
+                <label class="label">Typologies des buts marqués</label>
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Pied gauche  </label>
+                <input class="input" type="number"  name="butMPiedGauche" th:value="${toutesLesSaisons.butMPiedGauche}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> Pied droit  </label>
+                <input class="input" type="number"  name="butMPiedDroit" th:value="${toutesLesSaisons.butMPiedDroit}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Tete </label>
+                <input class="input" type="number"  name="butMTete" th:value="${toutesLesSaisons.butMTete}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Penalty  </label>
+                <input class="input" type="number"  name="butMPenalty" th:value="${toutesLesSaisons.butMPenalty}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  Coup de pied arreté </label>
+                <input class="input" type="number"  name="butMCoupDePiedArrete" th:value="${toutesLesSaisons.butMCoupDePiedArrete}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label">  Phase de jeu </label>
+                <input class="input" type="number"  name="butMPhaseDeJeu" th:value="${toutesLesSaisons.butMPhaseDeJeu}">
+            </div>
+
+
+            <div>
+                <label class="label">Typologies des buts encaissés</label>
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Pied gauche  </label>
+                <input class="input" type="number"  name="butEPiedGauche" th:value="${toutesLesSaisons.butEPiedGauche}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> Pied droit  </label>
+                <input class="input" type="number"  name="butEPiedDroit" th:value="${toutesLesSaisons.butEPiedDroit}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Tete </label>
+                <input class="input" type="number"  name="butETete" th:value="${toutesLesSaisons.butETete}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Penalty  </label>
+                <input class="input" type="number"  name="butEPenalty" th:value="${toutesLesSaisons.butEPenalty}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  Coup de pied arreté </label>
+                <input class="input" type="number"  name="butECoupDePiedArrete" th:value="${toutesLesSaisons.butECoupDePiedArrete}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label">  Phase de jeu </label>
+                <input class="input" type="number"  name="butEPhaseDeJeu" th:value="${toutesLesSaisons.butEPhaseDeJeu}">
+            </div>
+
+
+            <div>
+                <label class="label"> Buts inscrits par quart d'heure</label>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> 0-15  </label>
+                <input class="input" type="number"  name="butM0_15" th:value="${toutesLesSaisons.butM0_15}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 16-30  </label>
+                <input class="input" type="number"  name="butM16_30" th:value="${toutesLesSaisons.butM16_30}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  31-45 </label>
+                <input class="input" type="number"  name="butM31_45" th:value="${toutesLesSaisons.butM31_45}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  46-60 </label>
+                <input class="input" type="number"  name="butM46_60" th:value="${toutesLesSaisons.butM46_60}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 61-75  </label>
+                <input class="input" type="number"  name="butM61_75" th:value="${toutesLesSaisons.butM61_75}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  76-90 </label>
+                <input class="input" type="number"  name="butM76_90" th:value="${toutesLesSaisons.butM76_90}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  91- </label>
+                <input class="input" type="number"  name="butM91_94" th:value="${toutesLesSaisons.butM91_94}">
+            </div>
+
+
+
+            <div>
+                <label class="label"> Buts encaissés par quart d'heure</label>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> 0-15  </label>
+                <input class="input" type="number"  name="butE0_15" th:value="${toutesLesSaisons.butE0_15}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 16-30  </label>
+                <input class="input" type="number"  name="butE16_30" th:value="${toutesLesSaisons.butE16_30}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  31-45 </label>
+                <input class="input" type="number"  name="butE31_45" th:value="${toutesLesSaisons.butE31_45}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  46-60 </label>
+                <input class="input" type="number"  name="butE46_60" th:value="${toutesLesSaisons.butE46_60}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 61-75  </label>
+                <input class="input" type="number"  name="butE61_75" th:value="${toutesLesSaisons.butE61_75}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label">  76-90 </label>
+                <input class="input" type="number"  name="butE76_90" th:value="${toutesLesSaisons.butE76_90}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  91- </label>
+                <input class="input" type="number"  name="butE91_94" th:value="${toutesLesSaisons.butE91_94}">
+            </div>
+
+
+            <div>
+                <label class="label"> Buts inscrits par mi-temps</label>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> 1MT  </label>
+                <input class="input" type="number"  name="butM_1MT" th:value="${toutesLesSaisons.butM_1MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 2MT  </label>
+                <input class="input" type="number"  name="butM_2MT" th:value="${toutesLesSaisons.butM_2MT}">
+            </div>
+
+
+            <div>
+                <label class="label"> Buts encaissés par mi-temps</label>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> 1MT  </label>
+                <input class="input" type="number"  name="butME_1MT" th:value="${toutesLesSaisons.butME_1MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> 2MT  </label>
+                <input class="input" type="number"  name="butE_2MT" th:value="${toutesLesSaisons.butE_2MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des victoires  </label>
+                <input class="input" type="number"  name="nbVictoires" th:value="${toutesLesSaisons.nbVictoires}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des nuls  </label>
+                <input class="input" type="number"  name="nbNuls" th:value="${toutesLesSaisons.nbNuls}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Nombre des defaites </label>
+                <input class="input" type="number"  name="nbDefaites" th:value="${toutesLesSaisons.nbDefaites}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des victoires exterieur </label>
+                <input class="input" type="number"  name="nbVictoiresExt" th:value="${toutesLesSaisons.nbVictoiresExt}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des nuls exterieur </label>
+                <input class="input" type="number"  name="nbNulsExt" th:value="${toutesLesSaisons.nbNulsExt}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Nombre des defaites exterieur</label>
+                <input class="input" type="number"  name="nbDefaitesExt" th:value="${toutesLesSaisons.nbDefaitesExt}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des victoires domicile </label>
+                <input class="input" type="number"  name="nbVictoiresDom" th:value="${toutesLesSaisons.nbVictoiresDom}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des nuls domicile </label>
+                <input class="input" type="number"  name="nbNulsDom" th:value="${toutesLesSaisons.nbNulsDom}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Nombre des defaites domicile</label>
+                <input class="input" type="number"  name="nbDefaitesDom" th:value="${toutesLesSaisons.nbDefaitesDom}">
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des victoires en 1MT </label>
+                <input class="input" type="number"  name="nbVictoires_1MT" th:value="${toutesLesSaisons.nbVictoires_1MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des nuls en 1MT </label>
+                <input class="input" type="number"  name="nbNuls1MT" th:value="${toutesLesSaisons.nbNuls1MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Nombre des defaites en 1MT</label>
+                <input class="input" type="number"  name="nbDefaites1MT" th:value="${toutesLesSaisons.nbDefaites1MT}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des victoires en 2MT </label>
+                <input class="input" type="number"  name="nbVictoires_2MT" th:value="${toutesLesSaisons.nbVictoires_2MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label"> Nombre des nuls en 2MT </label>
+                <input class="input" type="number"  name="nbNuls_2MT" th:value="${toutesLesSaisons.nbNuls_2MT}">
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label class="label">  Nombre des defaites en 2MT</label>
+                <input class="input" type="number"  name="nbDefaites_2MT" th:value="${toutesLesSaisons.nbDefaites_2MT}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label">  Nombre d'arrivés</label>
+                <input class="input" type="number"  name="nbDArrives" th:value="${toutesLesSaisons.nbDArrives}">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label">  Nombre de départ</label>
+                <input class="input" type="number"  name="nbDDepart" th:value="${toutesLesSaisons.nbDDepart}">
+            </div>
+
+
+            <div class="buttons is-primary">
+                <button type="submit" class="button is-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

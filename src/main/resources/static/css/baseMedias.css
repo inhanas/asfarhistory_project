@@ -1,0 +1,143 @@
+
+
+/*------------------------------------1200 px -----------------------------------*/
+@media (max-width: 1200px) {
+
+
+    /*------------------------------------barre de navigation --------------------------------------*/
+    #navigation{
+        height: 8rem;
+        background-color: #606060;
+    }
+    #navigation a {
+        font-size: 3rem ;
+        padding: 10rem 6rem;
+        line-height: 6rem;
+    }
+    #navigation a:active{
+        font-size: 5rem;
+    }
+
+    /*-------------------------------HEADER--------------------------*/
+    header{
+        margin: 0;
+        /*height: 140vh;*/
+    }
+    h1{
+        font-size: 6rem;
+        top: 25rem;
+    }
+    header h2{
+        top: 26rem;
+        font-family: 'Abril Fatface';
+        font-size: 2.5rem;
+
+    }
+    header #arrow{
+        height: 9rem;
+        width: 9rem;
+        top:87%;
+        left: 50%;
+        font-size: 7rem;
+    }
+    .logo-asfar{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    /*----------------------------SECTION ABOUT -----------------------------------*/
+
+    #section-about{
+        margin: 0;
+        height: 140vh;
+        margin-top: 0rem;
+    }
+    .centreH{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .sousTitreAbout{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .paragraphe{
+        font-size: 1.5rem;
+    }
+    .paragraphe1{
+        margin-bottom: 1rem;
+    }
+    .composition{
+        margin-top: 0rem;
+    }
+
+    /*----------------------sections NOS STARS ------------------------------*/
+    #titreNosStars{
+        margin: 0;
+        height: 15vh;
+    }
+    #nosStars{
+        margin: 0;
+        height: 135vh;
+    }
+    .centre{
+        margin-top: -5rem;
+    }
+
+    -------------------------------SECTION CONTACT -------------------------------------------
+    #contact{
+        margin: 0;
+        height: 135vh;
+    }
+    .centreF{
+        margin-bottom: 4rem;
+    }
+    .sousTitreAboutContact{
+        font-size: 2.2rem;
+    }
+    .pix1200{
+        margin-bottom: 3rem;
+
+    }
+    .controls{
+    }
+    .btn-sub{
+        margin-bottom: 3rem}
+    .flexMedia{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+    /*------------------------------------1200 px -----------------------------------*/
+    @media (max-width: 992px) {
+
+
+        #navigation a {
+            font-size: 2.5rem;
+            padding: 1rem 3rem;
+            margin-right: 0rem;
+            margin-left: 0;
+
+        }
+
+        #navigation a:active {
+            font-size: 3.5rem;
+        }
+
+        h1 {
+            top: 25rem;
+            font-size: 5rem;
+        }
+
+        header h2 {
+            top: 26rem;
+            font-family: 'Abril Fatface';
+        }
+
+
+        #nosStars {
+            margin: 0;
+            height: 100vh;
+        }
+    }

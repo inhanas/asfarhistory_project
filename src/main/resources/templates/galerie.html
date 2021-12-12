@@ -1,0 +1,218 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      layout:decorator="layout">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--    bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- icone-->
+    <script src="https://kit.fontawesome.com/c7b443f9ff.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--    Feuilles de style-->
+    <link rel="stylesheet" href="
+    css/galerie.css">
+    <!--    Feuilles de style responsive-->
+
+    <!--    <link rel="stylesheet" href="css/baseMedias.css">-->
+    <!--title-->
+    <!-- police de caractére -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <!--title-->
+    <title>Accueil</title>
+</head>
+<body>
+<!--header-->
+<header>
+
+    <nav id="logo" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/inh.anas" target="_blank" class="liensNav"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/inhanas/?hl=fr" target="_blank" class="liensNav"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+    </nav>
+    <!--        barre de navigation-->
+    <nav id="navigation">
+        <a href="/" class="left">Accueil</a>
+        <a href="/palmares" class="left">Palmarés</a>
+        <a href="statistiques" class="left">Statistiques</a>
+        <a href="/joueurs" class="left">Joueurs</a>
+        <a href="/galerie" class="left">Galerie</a>
+        <a href="#contact" class="right">Contact</a>
+        <a href="#transferts" class="right">Transferts</a>
+        <a href="#nosStars" class="right">Nos Stars</a>
+        <a href="/managers" class="right">Entraineurs</a>
+        <a href="#bar" id="icon"><i class="fas fa-bars"></i></a>
+        <a href="#menu" id="arrow"></a>
+    </nav>
+
+</header>
+<!-- Section Galerie-->
+
+<section id="galerie">
+    <div class="galerie_div container">
+        <div class="titleDiv">
+            <h1 class="titreSection">
+                Galerie
+            </h1>
+        </div>
+    </div>
+    <input type="text" id="myinput" placeholder="Search...." class="form-control">
+    <div class="grille-portfolio" id="card">
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoum_anglais.jpg">
+            <p>timoumi mondial mexico 86 anglettere Maroc</p>
+        </div>
+        <div class="grid-item ">
+            <img src="img/nosStars/timoumi/timoumi_allemagne.jpg">
+            <p>timoumi mondial mexico 86 allemagne Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_allmands.gif">
+            <p>timoumi mondial mexico 86 allemagne Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_contre_allemagne.jpg">
+            <p>timoumi mondial mexico 86 allemagne Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_ballon_dor.jpg">
+            <p>timoumi ballon d'or Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_journal.jpg">
+            <p>timoumi Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_debout.jpg">
+            <p>timoumi mondial mexico 86 Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_maillot_far.jpg">
+            <p>timoumi far Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_maroc.jpg">
+            <p>timoumi mondial mexico 86  Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_mexico86.jpg">
+            <p>timoumi mondial mexico 86  Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_murcia.GIF">
+            <p>timoumi murcia</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_murcia.jpg">
+            <p>timoumi murcia</p>
+
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_pologne.jpg">
+            <p>timoumi mondial mexico 86 pologne  Maroc</p>
+
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/tmoumi_anglettere.jpg">
+            <p>timoumi mondial mexico 86  Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/tmoumi_krimo.jpg">
+            <p>timoumi mondial mexico 86 krimo  Maroc</p>
+
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/tmoumi_mondial.jpg">
+            <p>timoumi mondial mexico 86  Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_friyikh.jpg">
+            <p>timoumi mondial mexico 86 far wydad Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_lesfar.jpg">
+            <p>timoumi mondial far  Maroc</p>
+
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_article.jpg">
+            <p>timoumi journal  Maroc</p>
+        </div>
+        <div class="grid-item">
+            <img src="img/nosStars/timoumi/timoumi_maradona.jpg">
+            <p>timoumi maradona  Maroc</p>
+        </div>
+    </div>
+    <div class="slider-portfolio">
+
+        <button class="btn-fermer-slider" type="button">X</button>
+
+        <img class="img-visible-slider" src="img/nosStars/timoumi/timoum_anglais.jpg">
+
+        <button class="btn-left" type="button">
+            <img src="img/chevron-gauche.svg" alt="chevron gauche">
+        </button>
+        <button class="btn-right" type="button">
+            <img src="img/chevron-droit.svg" alt="chevron droit">
+        </button>
+
+    </div>
+
+</section>
+<script>
+    $(document).ready(function(){
+        $("#myinput").on("keyup",function (){
+            var value = $(this).val().toLowerCase();
+            console.log(value);
+            $("#card div").filter(function (){
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                console.log(value);
+            });
+        });
+    });
+    console.log($("#card div"));
+
+</script>
+<!--footer-->
+<div class="footer-main-div">
+    <div class="footer-social-icons">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i> </a> </li>
+            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> </li>
+        </ul>
+    </div>
+    <div class="footer-menu-one">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/section-about">About us</a></li>
+            <li><a href="/contact_us">Contact us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/produits">Products</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>Copyright © 2021 Design by : ASFARHISTORY</p>
+</div>
+<!--</footer>-->
+</body>
+</html>

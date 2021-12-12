@@ -1,0 +1,305 @@
+html{
+    font-size: 10px;
+    margin: 0;
+}
+body{
+    position: relative;
+    font-family: 'lato','sans-serif';
+    background-color: #ECF0F1;
+    margin: 0;
+}
+
+/*header les deux bar et le logo*/
+header{
+    height: 100vh;
+    max-width: 100%;
+    background: url("../img/background-site.png");
+    background-size: cover;
+    background-position: center;
+}
+/*logo*/
+#logo{
+    position: fixed;
+    z-index: 40;
+    width:100%;
+    height: 6rem;
+    background-color: black;
+}
+#logo img{
+    /*position: fixed;*/
+    width: 30%;
+    height: 100%;
+    padding-left: 30rem;
+}
+#logo a i{
+    text-decoration: none;
+    font-size: 3rem ;
+    padding: 1rem 3rem;
+    color: white;
+}
+/* navigation */
+#navigation{
+    position: fixed;
+    top:6rem;
+    z-index: 40;
+    width:100%;
+    background-color: darkgray;
+    text-align: center;
+    line-height: 8rem;
+    height: 6rem;
+    box-shadow: 0 0 0.5px 0 black;
+}
+
+#navigation a {
+    text-decoration: none;
+    font-size: 3rem ;
+    /*padding: 1rem 2.5rem 0rem 0rem;*/
+    line-height: 5rem;
+    font-family: 'kaushan script';
+    color: black;
+}
+.left{
+    float: left;
+    padding: 0.5rem 0rem 0rem 4rem;
+}
+.right{
+    float: right;
+    padding: 0.5rem 4rem 0rem 0rem;
+
+}
+#navigation a:active{
+    font-size: 4rem;
+}
+#icon{
+    display: none;
+}
+header #arrow{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top:-3%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: url("../img/ah_logo.png");
+    background-position: top;
+    background-size: cover;
+
+}
+
+
+/* fin header des deux bars et logo*/
+
+/*debut header les deux titres*/
+header h1{
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    color: ghostwhite;
+    top: 30rem;
+    font-family: 'kaushan script';
+    font-size: 9rem;
+    letter-spacing: 0.4rem;
+    left: 1%;
+    right: 1%;
+}
+#presentation_titres{
+    position: relative;
+    height: auto;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+.grilleCss{
+    display: grid;
+    grid-template: repeat(17, 25px) / 0.5fr repeat(14,100px) 0.5fr;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.image1{
+
+    grid-area: 3/2/14/4;
+    position: relative;
+}
+.image2{
+    grid-area: 3/5/14/7;
+    position: relative;
+}
+.image3{
+    grid-area: 3/8/14/10;
+    position: relative;
+}
+
+.image4{
+
+    grid-area: 3/11/14/13;
+    position: relative;
+}
+.image5{
+    grid-area: 3/14/14/16;
+    position: relative;
+}
+
+#botola{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding:2rem;
+}
+.won{
+    color: green;
+
+}
+.lost{
+    color: red;
+}
+.draw{
+    color: black;
+}
+.titre{
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    font-size: 3rem;
+}
+.table{
+    width: 100%;
+    height: 100%;
+}
+td{
+    font-size: 2rem;
+    color: darkslategray;
+    font-weight: bold;
+    vertical-align: baseline;
+    text-align-all: center;
+    /*padding-top: 2px;*/
+    /*padding-bottom: 2px;*/
+}
+i{
+    font-size: 0.7rem;
+}
+.saison{
+    font-weight: bold;
+    color: black;
+}
+.pt{
+    font-weight: bold;
+    color: black;
+}
+tr{
+    background-color: #DCDCDC;
+}
+#coupe_du_trone{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding:2rem;
+}
+.border{
+    border-top: 1px solid  #edeef2;
+}
+#super_coupe{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding:2rem;
+
+}
+.td_club{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    vertical-align: baseline;
+    text-align-all: center;
+}
+#cl{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding:2rem;
+}
+/*footer*/
+.footer-main-div{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height:auto ;
+    margin: auto;
+}
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    /*width: 50%;*/
+    height: 50%;
+    margin: 0px 20px;
+    /*border-radius: 100%;*/
+    /*background: darkgreen;*/
+}
+.footer-social-icons ul li a {
+    color: darkgreen;
+    font-size: 30px;
+    display: block;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: darkred;
+    margin: 0px 0px;
+    padding: 10px;
+}
+.footer-bottom p{
+    font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+i{
+    font-size: 3rem;
+}
